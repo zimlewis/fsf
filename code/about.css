@@ -1,0 +1,290 @@
+@font-face {font-family: roblox;src: url(../media/font/RollboxMedium-JRxYB.ttf);}
+*{box-sizing: border-box;}
+
+body, html
+{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.ddb
+{
+  background-color:transparent;
+  color:#000000;
+  border:#ffffff;
+  cursor:pointer;
+}
+
+.dd
+{
+  position:relative;
+  display:inline-block;
+}
+
+.ddc
+{
+  text-align: center;
+  display:none;
+  position:absolute;
+  background-color:#000000;
+  min-width:120px;
+  z-index:4;
+}
+
+.ddc a
+{
+  text-align: center;
+  display:block;
+  background-color:#000000;
+  color:#000000;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.ddc a:hover {background-color:#00daff;}
+
+.show {display:block;}
+
+.header
+{
+  background-color:#000000;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+}
+
+.h{display: flex;padding: 10px;font-family: roblox;}
+h1 {font-family: roblox;}
+.but1{width: 100%;text-align: left;}
+.but2{width: 10%;text-align: right; font-size: 20px;}
+.but3{width: 10%;text-align: right; font-size: 20px;}
+
+hr
+{
+  border-color:#00fff7;
+}
+
+.banner
+{
+  background-image: url("../media/aboutbanner.jpg");
+  height: 98%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: center;
+}
+
+.playnow
+{
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 15%;
+  width: 20%;
+}
+
+.playnow img
+{
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+}
+
+.trailer{display: flex;background-color:#0a1e31;font-family: 'Times New Roman', Times, serif;}
+
+.vid{width: 20%; margin: auto;padding: 30px;}
+.vidtxt
+{
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  color: #bcbcbc;
+  font-size: 20px;
+}
+
+.slideshow
+{
+  display: flex;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/bg1.jpg);
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.slidetxt
+{
+  width: 60%;
+  margin: auto;
+  margin-left: 18%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.slides
+{
+  position: relative;
+  display: flex;
+  margin: auto;
+  margin-left: 0;
+  width: 500px;
+}
+
+.slide img
+{
+  width: 100%;
+  display: block;
+}
+
+.slider
+{
+  width: 100%;
+  margin: 50px;
+}
+
+.slider .slides
+{
+  overflow-x: hidden;
+}
+
+.slider .slides .slide
+{
+  display: flex;
+  animation: move 10s infinite linear;
+}
+
+@keyframes move
+{
+  10% {translate: 0%;}
+  20% {translate: 0%;}
+  30% {translate: -100%;}
+  40% {translate: -100%;}
+  50% {translate: -200%;}
+  60% {translate: -200%;}
+  70% {translate: -300%;}
+  80% {translate: -300%;}
+  90% {translate: -400%;}
+  100% {translate: -400%;}
+}
+
+.cardshowcase{
+  display: flex;
+  background-color:#0a1e31;
+  width: 100%;
+  height: 60vh;
+}
+
+.cardshowcase > iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+footer
+{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/bannerbg.png");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: roblox;
+}
+
+.foot
+{
+  text-align: center;
+  display: flex;
+}
+
+.char
+{
+  width: 100%;
+  flex-direction: column;
+}
+
+.box
+{
+  background:linear-gradient(90deg, hsl(270 100% 50%), hsl(300 100% 50%), cyan);
+  aspect-ratio: 20/8;
+  width: 3800px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.socialinfo
+{
+  font-size: 25px;
+}
+
+ul
+{
+  list-style-type:none;
+  display:flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 800px)
+{
+  .char, .box
+  {
+    flex: 100%;
+  }
+}
+
+.txttop
+{
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.socials
+{
+  padding-top: 20px;
+  columns: 4;
+}
+
+.bx
+{
+  display: flex;
+  font-size: 50px;
+  width: auto;
+}
+
+.txtbottom
+{
+  margin-top: 80px;
+  text-align: center;
+}
+
+.txtbottom p
+{
+  font-family: roblox;
+}
+
+.cardshowcaseheader
+{
+  background-color: #0a1e31;
+  position: relative;
+  color: #bcbcbc;
+  margin: auto;
+  padding-top: 20px;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+}
+
+.cardshowcaseheader h1
+{
+  margin: 0;
+  padding: 0;
+}

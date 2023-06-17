@@ -1,0 +1,56 @@
+@font-face {font-family: roblox;src: url(../media/font/RollboxMedium-JRxYB.ttf);}
+
+body
+{
+  margin: 0;
+  padding: 0;
+}
+
+table
+{
+    width: 100%;
+}
+
+td
+{
+    border: 2px solid #00fff7;
+    padding: 5px;
+    min-width: 100%;
+}
+
+
+a
+{
+    padding: 10px;
+    color: #bcbcbc;
+    font-size: 20px;
+    width: 100%;
+}
+
+.img
+{
+    width: 30%;
+    float: left;
+}
+
+.desc
+{
+    float: left;
+    width: 60%;
+    margin-left: 20px;
+}
+
+img
+{
+    width: 100%;
+}
+
+h2
+{
+    font-family: roblox;
+}
+
+p
+{
+    font-family: 'Times New Roman', Times, serif;
+}

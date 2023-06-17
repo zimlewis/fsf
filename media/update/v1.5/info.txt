@@ -1,0 +1,7 @@
+v1.5: Siege Update
+-----------------------------------------
+NEW
+- The long awaited Siege gamemode is here! Take part in a 3v1 coop pvp enviroment where you have to work with your 2 other pals in order to take down a big beefy boss. Our first installment revolves around none other than Faris Crowling. Hazard's reigning dictator. He is about to send his men to space and pee on the moon! You must stop him at all cost!
+- New Nation: Mystland. A place of cold, desolate winter wonderland once known as Canada. Currently there is only Kratos but more will come
+- New Traits: You've seen them before. Cope, seethe and mald
+- Meltrocito's color went from yellow to green. Yellow now belongs to Hazard

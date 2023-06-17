@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <title>File Select Fusion</title>
+    <link rel="icon" href="media/logo.ico">
+    <link rel="stylesheet" href="code/index.css">
+    <link rel="stylesheet" href="code/scifiscrollbar.css">
+    <link rel="stylesheet" href="code/boxicons-2.1.4/css/boxicons.css">
+</head>
+<body>
+    <script src = "code/menu.js"></script>
+    <iframe id = "login-form" src = "AccountForm.html"></iframe>
+    <div class="header">
+        <div class="h but1">
+            <div class="dd">
+                <button onclick="menu()" class="ddb">
+                    <img src="media/logo.png" style="width: 60px; height: auto;">
+                    <div class="bx bx-chevron-down" style="color: #ffffff;"></div>
+                </button>
+                <ul id="dropdown" class="ddc">
+                    <li>
+                        <a href="index.html" class="ddi">
+                            <img src="media/logo.png" style="width: 60px; height: auto;" title="File Select Fusion">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.yugioh-card.com/en/" class="ddi">
+                            <img src="media/ygo.png" style="width: 60px; height: auto;" title="Yugioh">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://magic.wizards.com/en" class="ddi">
+                            <img src="media/mtg.png" style="width: 60px; height: auto;" title="Magic the Gathering">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://playruneterra.com/en-us/" class="ddi">
+                            <img src="media/lor.png" style="width: 60px; height: auto;" title="Legends of Runeterra">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="h but2">
+            <a onclick = "openAccountPage()" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Account">
+                <p>ACCOUNT</p>
+            </a>
+        </div>
+    </div>
+
+    <div style="line-height:86px;"><br></div>
+    <div class="banner">
+        <div class="txt">
+            <a href="About.html" title="File Select Fusion">
+                <img src="media/bannertxt.png" alt="FSF" style="width: 80%; height: auto;">
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col left">
+            <p>
+                <a href= "Feedback.html" target = "content" title="Contact our Customer Support">
+                    <b>FEEDBACK</b>
+                </a>
+            </p>
+
+            <hr>
+
+            <p>
+                <a href="update.html" target="content" title="Update log for the game">
+                    <b>UPDATES</b>
+                </a>
+            </p>
+
+            <hr>
+
+            <p>
+                <a href="Newsletter.html" target="content" title="Incoming updates for the game">
+                    <b>NEWS</b>
+                </a>
+            </p>
+
+            <hr>
+
+            <p>
+                <a href="story.html" target="content" title="Incoming updates for the game">
+                    <b>STORY</b>
+                </a>
+            </p>
+        </div>
+
+        <div class="col lumn">
+            <hr id = "col_1" width="1" size="1000"/>
+        </div>
+
+        <iframe name = "content" id = "content" class = "col" src = "Newsletter.html">
+        </iframe>
+
+    </div>
+
+
+    <script>
+
+        function openAccountPage(){
+            var f = document.getElementById("login-form");
+            f.style.display = "block";
+            
+        }
+        function closeAccountPage(){
+            var f = document.getElementById("login-form");
+            f.style.display = "none";
+            
+        }
+
+    </script>
+</body>
+<footer>
+    <div class="foot">
+        <div class="char">
+            <img src="media/jak.png" width="100%">
+        </div>
+
+        <div class="box">
+
+            <div class="txttop">
+                <h1>Contact Us</h1>
+            </div>
+
+            <ul>
+                <div class="socials">
+
+                    <li>
+                        <a style="text-decoration:none; color:#000000;" href="https://www.youtube.com/channel/UCPahLuD23UxaG51kF8pYpcw" target="_blank">
+                            <div class="bx bxl-youtube"></div>
+                            <div class="socialinfo">Youtube</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a style="text-decoration:none; color:#000000;" href="https://discord.gg/CdpWPHPMQW" target="_blank">
+                            <div class="bx bxl-discord"></div>
+                            <div class="socialinfo">Discord</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a style="text-decoration:none; color:#000000;" href="https://twitter.com/fsf_bzstudios" target="_blank">
+                            <div class="bx bxl-twitter"></div>
+                            <div class="socialinfo">Twitter</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a style="text-decoration:none; color:#000000;" href="https://www.facebook.com/profile.php?id=100092621487529" target="_blank">
+                            <div class="bx bxl-facebook-square"></div>
+                            <div class="socialinfo">Facebook</div>
+                        </a>
+                    </li>
+
+                </div>
+            </ul>
+
+            <div class="txtbottom">
+                <p>@2023 BZ Studios</p>
+            </div>
+
+        </div>
+
+        <div class="char">
+            <img src="media/mayo.png" width="100%">
+        </div>
+    </div>
+</footer>

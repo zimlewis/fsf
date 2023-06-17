@@ -1,0 +1,7 @@
+Update v1.7: Shadows of the Snow and Sand
+The 3 new countries got added with barely any lore, content or purpose. This update should hopefully fix all of those problems (Or at least define a foundation for the country)
+Plans
+- To counter the ever rising meta of powerful rushdowns, more defensive measures will be implemented with new cards this update. Coming in the form of freeze cards from Mystland, power drain mechanics from Osvara and ability disabling from Edith
+- "Northern Forest", the first themed stage for Mystland will be introduced! With new mechanics and mechanic-based cards exclusive to the stage
+- Complete rework of Jack. He has been an oddball in the meltrocito gang for a while now. His pals, John and James should hopefully recomplete the JJJs trial.
+- Complete lore descriptions for the 3 countries

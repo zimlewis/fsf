@@ -1,0 +1,230 @@
+@font-face {font-family: roblox;src: url(../media/font/RollboxMedium-JRxYB.ttf);}
+*{box-sizing: border-box;}
+
+body, html
+{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: roblox;
+}
+
+iframe[name = "content"]
+{
+  width: 88%;
+  border : 0px; 
+  height : 1000px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.ddb
+{
+  background-color:transparent;
+  color:#000000;
+  border:#ffffff;
+  cursor:pointer;
+}
+
+.dd
+{
+  position:relative;
+  display:inline-block;
+}
+
+.ddc
+{
+  text-align: center;
+  display:none;
+  position:absolute;
+  background-color:#000000;
+  min-width:120px;
+  z-index:4;
+}
+
+.ddc a
+{
+  text-align: center;
+  display:block;
+  background-color:#000000;
+  color:#000000;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.ddc a:hover {background-color:#00daff;}
+
+.show {display:block;}
+
+.header
+{
+  background-color:#000000;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+}
+
+.h{display: flex;padding: 10px;}
+
+.but1{width: 100%;text-align: left;}
+.but2{width: 10%;text-align: right; font-size: 20px;}
+
+.row
+{
+  background-color:#0a1e31;
+}
+
+.col
+{
+  float: left;
+  padding: 10px;
+}
+
+.left
+{
+  font-size: 30px;
+  width: 10%;
+}
+
+.left a, .right a
+{
+  text-decoration: none;
+  color:#bcbcbc;
+  font-size: 20px;
+}
+
+hr
+{
+  border-color:#00fff7;
+}
+
+.lumn
+{
+  width: 1%;
+}
+
+.right
+{
+  font-size: 0px;
+  text-align: center;
+  width: 49%;
+}
+
+.row:after
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.banner
+{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/bannerbg.png");
+  top: 0;
+  left: 0;
+  height: 20%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: center;
+}
+
+.txt
+{
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  vertical-align: center;
+}
+
+footer
+{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/bannerbg.png");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.foot
+{
+  text-align: center;
+  display: flex;
+}
+
+.char
+{
+  width: 100%;
+  flex-direction: column;
+}
+
+.box
+{
+  background:linear-gradient(90deg, hsl(270 100% 50%), hsl(300 100% 50%), cyan);
+  aspect-ratio: 20/8;
+  width: 3800px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.socialinfo
+{
+  font-size: 25px;
+}
+
+ul
+{
+  list-style-type:none;
+  display:flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 800px)
+{
+  .char, .box
+  {
+    flex: 100%;
+  }
+}
+
+.txttop
+{
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.socials
+{
+  padding-top: 20px;
+  columns: 4;
+}
+
+.bx
+{
+  display: flex;
+  font-size: 50px;
+  width: auto;
+}
+
+.txtbottom
+{
+  margin-top: 80px;
+  text-align: center;
+}
+
+#login-form
+{
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  border: 0; 
+  z-index: 7; 
+  width: 100%; 
+  min-height: 100%; 
+  transition: 0.5s;
+  display: none;
+}
