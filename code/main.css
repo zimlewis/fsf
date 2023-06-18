@@ -1,0 +1,108 @@
+@font-face {font-family: roblox;src: url(../media/font/RollboxMedium-JRxYB.ttf);}
+*{box-sizing: border-box;}
+
+body, html
+{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: roblox;
+}
+
+#login-form
+{
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  border: 0; 
+  z-index: 7; 
+  width: 100%; 
+  min-height: 100%; 
+  transition: 0.5s;
+  display: none;
+}
+
+.header
+{
+  background-color:#000000;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+}
+
+.h{display: flex;padding: 10px;font-family: roblox;}
+h1 {font-family: roblox;}
+.but1{width: 100%;text-align: left;}
+.but2{width: 10%;text-align: right; font-size: 20px;}
+.but3{width: 10%;text-align: right; font-size: 20px;}
+
+.ddb
+{
+  background-color:transparent;
+  color:#000000;
+  border:#ffffff;
+  cursor:pointer;
+}
+
+.dd
+{
+  position:relative;
+  display:inline-block;
+}
+
+.ddc
+{
+  text-align: center;
+  display:none;
+  position:absolute;
+  background-color:#000000;
+  min-width:120px;
+  z-index:4;
+}
+
+.ddc a
+{
+  text-align: center;
+  display:block;
+  background-color:#000000;
+  color:#000000;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.ddc a:hover {background-color:#00daff;}
+
+.show {display:block;}
+
+
+iframe[name = "content"]
+{
+  width: 88%;
+  border : 0px; 
+  height : 1000px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+
+ul
+{
+  list-style-type:none;
+  display:flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown{
+    display: none;
+}
+
+.bx
+{
+  display: flex;
+  font-size: 50px;
+  width: auto;
+}
