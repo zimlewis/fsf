@@ -1,13 +1,14 @@
 function openAccountPage(){
     var f = document.getElementById("login-form");
     f.style.display = "block";
-    enableScrolling();
+    disableScrolling();
     
 }
 function closeAccountPage(){
     var f = document.getElementById("login-form");
     f.style.display = "none";
-    disableScrolling();
+    enableScrolling();
+    
     
 }
 
