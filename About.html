@@ -11,6 +11,8 @@
 <body>
     <script src="code/menu.js"></script>
     <script src="code/slideshow.js"></script>
+    <script src = "code/toggleform.js"></script>
+    <iframe id = "login-form" src = "AccountForm.html"></iframe>
     <div class="header">
         <div class="h but1">
             <div class="dd">
@@ -47,14 +49,8 @@
         </div>
 
         <div class="h but2">
-            <a style="text-decoration:none; color:#ffffff;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Sign up">
-                <p>SIGN UP</p>
-            </a>
-        </div>
-
-        <div class="h but3">
-            <a style="text-decoration:none; color:#ffffff;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Log in">
-                <p>LOG IN</p>
+            <a onclick = "openAccountPage()" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Account">
+                <p>ACCOUNT</p>
             </a>
         </div>
     </div>
