@@ -6,12 +6,28 @@
         <link rel="icon" href="media/logo.ico">
         <link rel="stylesheet" href="code/scifiscrollbar.css">
         <link rel="stylesheet" href="code/main.css">
-        <link rel="stylesheet" href="code/playpage.css">
+        <link rel="stylesheet" href="code/digitalplay.css">
         <link rel="stylesheet" href="code/boxicons-2.1.4/css/boxicons.css">
     </head>
     <body>
         <script src="code/menu.js"></script>
         <script src = "code/toggleform.js"></script>
+        <script>
+
+            
+            var content;
+
+            window.addEventListener("load", (event) => {
+                content = document.getElementById("content");
+                if (localStorage.getItem("type") == "create"){
+                    content.src = "https://screentop.gg/@CharaTBZ/FSF";
+                }else{
+                    content.src = "https://screentop.gg/@CharaTBZ/FSF/play/" + localStorage.getItem("id");
+                }
+            });
+
+
+        </script>
         <iframe id = "login-form" src = "AccountForm.html"></iframe>
         <div class="header">
             <div class="h but1">
@@ -54,7 +70,7 @@
                 </a>
             </div>
         </div>
-        <iframe style = "width: 100%;" name = "content" id = "content" class = "col" src = "https://screentop.gg/@CharaTBZ/FSF"></iframe>
+        <iframe style = "width: 100%;" name = "content" id = "content" class = "col" ></iframe>
     </body>
 </html>
 
