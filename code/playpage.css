@@ -67,12 +67,49 @@ body {overflow-x: hidden;background-color: #0a1e31;background-repeat:repeat;back
 }
 
 
-iframe[name = "content"]
-{
-  width: 100%;
-  border : 0px; 
-  height : 800px;
-  margin-top: 50px;
-  overflow-x: hidden;
-  overflow-y: scroll;
+
+
+.product-table{
+    width: 100%;
 }
+
+.left-column{
+    width: 50%; 
+    padding-left: 100px
+}
+
+.right-column{
+    width: 50%; 
+    padding-left: 100px
+}
+
+.room-id{
+    transition: 0.5s;
+    width: 90%;
+    padding: 15px;
+    margin: 5px 30px 22px 0;
+    display: inline-block;
+    background: #0a1e31;
+    color: #bcbcbc;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+}
+
+.room-id:focus{
+    background-color: #0a1e31;
+    outline: none;
+    border-bottom: 2px solid #00fff7;
+}
+
+.playbutton a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }

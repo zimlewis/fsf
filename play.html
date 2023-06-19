@@ -60,9 +60,9 @@
         </div>
 
         <div class="products">
-            <table style = "width: 100%;">
+            <table class = "product-table">
                 <tr >
-                  <th style = "width: 50%; padding-left: 100px">
+                  <th class = "left-column">
                     <div class="leftproducts">
                         <div class="product">
                             <div class="productimage">
@@ -92,13 +92,23 @@
                     </div>
 
                   </th>
-                  <th style = "width: 50%; padding-left: 100px">
+                  <th class = "right-column">
                     <div class="rightproducts">
                         <div class="bigproduct">
                             <img src="media/gameposter.jpg">
                             <h1 style = "margin: 10px;">Play the digital version</h1>
                             <div class="playbutton">
-                                <a href = "playdigital.html"><img id = "buy-3" src="media/playnow.png"></a>
+                                <table>
+                                    <tr>
+                                        <th style = "width : 50%">
+                                            <a id = "create" href = "playdigital.html"><div class="playbutton">Create room</div></a>
+                                        </th>
+                                        <th style = "width : 50%">
+                                            <input id = "room-id" placeholder = "Enter your room id to join your friend" class = "room-id" type = "text">
+                                            <a id = "join" href = "playdigital.html"><div class="playbutton">Join room</div></a>
+                                        </th>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -112,7 +122,9 @@
         <script>
             const b1 = document.getElementById("buy-1")
             const b2 = document.getElementById("buy-2")
-            const b3 = document.getElementById("buy-3")
+            const join = document.getElementById("join")
+            const create = document.getElementById("create")
+            const room_id = document.getElementById("room-id")
         
         
             b1.addEventListener('click' , () => {
@@ -125,13 +137,35 @@
                 const product_pirce = "$42.69";
                 buy(product_pirce , product_name);
             })
-        
+            
+
+            join.addEventListener('click' , () => {
+                const type = "join";
+                const id = room_id.value;
+
+                play(type , id)
+            })
+
+            create.addEventListener('click' , () => {
+                const type = "create";
+
+                play(type)
+            })
+
             function buy(price , name){
                 localStorage.setItem("pName" , price);
                 localStorage.setItem("pPrice" , name);
         
                 window.location.href = "checkout.html";
             }
+
+            function play(type , id = 0){
+                localStorage.setItem("type" , type);
+                if (id != 0){
+                    localStorage.setItem("id" , id);   
+                }
+            }
+
         </script>
     </body>
 </html>
