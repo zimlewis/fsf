@@ -35,8 +35,7 @@ body, html
 .h{display: flex;padding: 10px;font-family: roblox;}
 h1 {font-family: roblox;}
 .but1{width: 100%;text-align: left;}
-.but2{width: 10%;text-align: right; font-size: 20px;}
-.but3{width: 10%;text-align: right; font-size: 20px;}
+.but2{width: 5%;text-align: right; font-size: 20px;}
 
 .ddb
 {
@@ -77,14 +76,7 @@ h1 {font-family: roblox;}
 .show {display:block;}
 
 
-iframe[name = "content"]
-{
-  width: 88%;
-  border : 0px; 
-  height : 1000px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
+
 
 
 ul

@@ -13,7 +13,6 @@
         <script src="code/menu.js"></script>
         <script src = "code/toggleform.js"></script>
         <iframe id = "login-form" src = "AccountForm.html"></iframe>
-        <div class="bg"></div>
         <div class="header">
             <div class="h but1">
                 <div class="dd">
@@ -55,5 +54,85 @@
                 </a>
             </div>
         </div>
+
+        <div class="productheader">
+            <h1>Buy our products!</h1>
+        </div>
+
+        <div class="products">
+            <table style = "width: 100%;">
+                <tr >
+                  <th style = "width: 50%; padding-left: 100px">
+                    <div class="leftproducts">
+                        <div class="product">
+                            <div class="productimage">
+                                <img src="media/cardbox.png">
+                            </div>
+        
+                            <div id = "buy-1" class="producttxt">
+                                <div class="price"><img></div>
+                                <h1>Standard Vanilla</h1>
+                                <p>Contains 69 basic cards with 2 evolutions per card</p>
+                                <p>The best experience for new players</p>
+                            </div>
+                        </div>
+        
+                        <div class="product">
+                            <div class="productimage">
+                                <img src="media/cardbox.png">
+                            </div>
+        
+                            <div id = "buy-2" class="producttxt">
+                                <div class="price"><img></div>
+                                <h1>Collector's Edition</h1>
+                                <p>Contains all cards currently in the game (10.000+ cards)</p>
+                                <p>For those who want to support us</p>
+                            </div>
+                        </div>
+                    </div>
+
+                  </th>
+                  <th style = "width: 50%; padding-left: 100px">
+                    <div class="rightproducts">
+                        <div class="bigproduct">
+                            <img src="media/gameposter.jpg">
+                            <h1 style = "margin: 10px;">Play the digital version</h1>
+                            <div class="playbutton">
+                                <a href = "playdigital.html"><img id = "buy-3" src="media/playnow.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                  </th>
+                </tr>
+              </table>
+
+
+
+        </div>
+        <script>
+            const b1 = document.getElementById("buy-1")
+            const b2 = document.getElementById("buy-2")
+            const b3 = document.getElementById("buy-3")
+        
+        
+            b1.addEventListener('click' , () => {
+                const product_name = "Standard Vanila";
+                const product_pirce = "$6.99";
+                buy(product_pirce , product_name);
+            })
+            b2.addEventListener('click' , () => {
+                const product_name = "Collector's edition";
+                const product_pirce = "$42.69";
+                buy(product_pirce , product_name);
+            })
+        
+            function buy(price , name){
+                localStorage.setItem("pName" , price);
+                localStorage.setItem("pPrice" , name);
+        
+                window.location.href = "checkout.html";
+            }
+        </script>
     </body>
 </html>
+
