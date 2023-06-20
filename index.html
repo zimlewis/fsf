@@ -6,10 +6,13 @@
     <link rel="icon" href="media/logo.ico">
     <link rel="stylesheet" href="code/index.css">
     <link rel="stylesheet" href="code/scifiscrollbar.css">
+    <link rel="stylesheet" href="code/main.css">
     <link rel="stylesheet" href="code/boxicons-2.1.4/css/boxicons.css">
 </head>
 <body>
     <script src = "code/menu.js"></script>
+    <script src = "code/toggleform.js"></script>
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
     <iframe id = "login-form" src = "AccountForm.html"></iframe>
     <div class="header">
         <div class="h but1">
@@ -48,7 +51,12 @@
 
         <div class="h but2">
             <a onclick = "openAccountPage()" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Account">
-                <p>ACCOUNT</p>
+                <p><div class = "bx bx-user-circle"></div></p>
+            </a>
+        </div>
+        <div class="h but3">
+            <a href = "play.html" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Play">
+                <p><div class = "bx bx-play"></div></p>
             </a>
         </div>
     </div>
@@ -104,21 +112,9 @@
 
     </div>
 
+    <div class="zalo-chat-widget" data-oaid="2287090737043824532" data-welcome-message="FSF xin chào!" data-autopopup="0" data-width="350" data-height="420"></div>
 
-    <script>
 
-        function openAccountPage(){
-            var f = document.getElementById("login-form");
-            f.style.display = "block";
-            
-        }
-        function closeAccountPage(){
-            var f = document.getElementById("login-form");
-            f.style.display = "none";
-            
-        }
-
-    </script>
 </body>
 <footer>
     <div class="foot">

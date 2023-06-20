@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <title>File Select Fusion</title>
+        <link rel="icon" href="media/logo.ico">
+        <link rel="stylesheet" href="code/scifiscrollbar.css">
+        <link rel="stylesheet" href="code/main.css">
+        <link rel="stylesheet" href="code/digitalplay.css">
+        <link rel="stylesheet" href="code/boxicons-2.1.4/css/boxicons.css">
+    </head>
+    <body>
+        <script src="code/menu.js"></script>
+        <script src = "code/toggleform.js"></script>
+        <script>
+
+            
+            var content;
+
+            window.addEventListener("load", (event) => {
+                content = document.getElementById("content");
+                if (localStorage.getItem("type") == "create"){
+                    content.src = "https://screentop.gg/@CharaTBZ/FSF";
+                }else{
+                    content.src = "https://screentop.gg/@CharaTBZ/FSF/play/" + localStorage.getItem("id");
+                }
+            });
+
+
+        </script>
+        <iframe id = "login-form" src = "AccountForm.html"></iframe>
+        <div class="header">
+            <div class="h but1">
+                <div class="dd">
+                    <button onclick="menu()" class="ddb">
+                        <img src="media/logo.png" style="width: 60px; height: auto;">
+                        <div class="bx bx-chevron-down" style="color: #ffffff;"></div>
+                    </button>
+                    <ul id="dropdown" class="ddc">
+                        <li>
+                            <a href="index.html" class="ddi">
+                                <img src="media/logo.png" style="width: 60px; height: auto;" title="File Select Fusion">
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="https://www.yugioh-card.com/en/" class="ddi">
+                                <img src="media/ygo.png" style="width: 60px; height: auto;" title="Yugioh">
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="https://magic.wizards.com/en" class="ddi">
+                                <img src="media/mtg.png" style="width: 60px; height: auto;" title="Magic the Gathering">
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="https://playruneterra.com/en-us/" class="ddi">
+                                <img src="media/lor.png" style="width: 60px; height: auto;" title="Legends of Runeterra">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="h but2">
+                <a onclick = "openAccountPage()" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Account">
+                    <p><div class = "bx bx-user-circle"></div></p>
+                </a>
+            </div>
+            <div class="h but3">
+                <a href = "play.html" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Play">
+                    <p><div class = "bx bx-play"></div></p>
+                </a>
+            </div>
+        </div>
+        <iframe style = "width: 100%;" name = "content" id = "content" class = "col" ></iframe>
+    </body>
+</html>
+

@@ -6,11 +6,15 @@
     <link rel="icon" href="media/logo.ico">
     <link rel="stylesheet" href="code/about.css">
     <link rel="stylesheet" href="code/scifiscrollbar.css">
+    <link rel="stylesheet" href="code/main.css">
     <link rel="stylesheet" href="code/boxicons-2.1.4/css/boxicons.css">
 </head>
 <body>
     <script src="code/menu.js"></script>
     <script src="code/slideshow.js"></script>
+    <script src = "code/toggleform.js"></script>
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+    <iframe id = "login-form" src = "AccountForm.html"></iframe>
     <div class="header">
         <div class="h but1">
             <div class="dd">
@@ -47,14 +51,13 @@
         </div>
 
         <div class="h but2">
-            <a style="text-decoration:none; color:#ffffff;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Sign up">
-                <p>SIGN UP</p>
+            <a onclick = "openAccountPage()" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Account">
+                <p><div class = "bx bx-user-circle"></div></p>
             </a>
         </div>
-
         <div class="h but3">
-            <a style="text-decoration:none; color:#ffffff;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Log in">
-                <p>LOG IN</p>
+            <a href = "play.html" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Play">
+                <p><div class = "bx bx-play"></div></p>
             </a>
         </div>
     </div>
@@ -63,9 +66,6 @@
     
     <div class="banner">
         <div class="playnow">
-            <i class='bx bx-tada-hover'>
-               <a href="https://screentop.gg/@CharaTBZ/FSF"><img src="media/playnow.png"></a>
-            </i>
         </div>
     </div>
 
@@ -113,6 +113,7 @@
         <iframe scrolling="no" src = "https://zimlewis.github.io/cardshowcase/"></iframe>
     </div>
 
+    <div class="zalo-chat-widget" data-oaid="2287090737043824532" data-welcome-message="FSF xin chào!" data-autopopup="0" data-width="350" data-height="420"></div>
 </body>
 <footer>
     <div class="foot">
