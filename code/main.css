@@ -99,3 +99,28 @@ ul
   font-size: 50px;
   width: auto;
 }
+
+#chat-bubble-toggle{
+  position: fixed;
+  width: 5%;
+  right: 1vw;
+  bottom: 10px;
+  transition: 1s;
+  cursor: pointer;
+}
+#chat-bubble-toggle:hover{
+  width: 7%;
+}
+
+#chat-bubble{
+  display: block;
+  position: fixed; 
+  top: 0; 
+  left: 100%;
+  border: 0; 
+  z-index: 10; 
+  width: 40vw; 
+  min-height: 100%; 
+  transition: 1s;
+  border-radius: 10px;
+}

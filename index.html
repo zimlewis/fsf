@@ -113,6 +113,29 @@
     </div>
 
 
+    <img onclick = "toggle_chat()" id = "chat-bubble-toggle" src = 'media/urichat.png'/>
+    <iframe id = "chat-bubble" src = "messaging.html"></iframe>
+    
+    <script>
+        var open_chat = false;
+        function toggle_chat(){
+            
+            const chat_bubble = document.getElementById('chat-bubble');
+            const chat_toogle = document.getElementById('chat-bubble-toggle');
+            if (open_chat){
+                chat_bubble.style.left = "100vw"
+                chat_toogle.style.right = "1vw"
+
+                open_chat = false
+            }else if (!open_chat){
+                chat_bubble.style.left = "60vw"
+                chat_toogle.style.right = "40vw"
+
+                open_chat = true
+            }
+        }
+    </script>
+
 </body>
 <footer>
     <div class="foot">
