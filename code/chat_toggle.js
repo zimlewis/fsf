@@ -9,8 +9,8 @@
 
                 open_chat = false
             }else if (!open_chat){
-                chat_bubble.style.left = "59.5vw"
-                chat_toogle.style.right = "41vw"
+                chat_bubble.style.left = "73vw"
+                chat_toogle.style.right = "27vw"
 
                 open_chat = true
             }

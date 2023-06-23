@@ -115,12 +115,12 @@ ul
 #chat-bubble{
   display: block;
   position: fixed; 
-  top: 0; 
+  bottom: 10px; 
   left: 100%;
-  border: 0; 
+  border: cyan solid 3px; 
   z-index: 10; 
-  width: 40vw; 
-  min-height: 100%; 
+  width: 25vw; 
+  height: 70vh;
   transition: 1s;
   border-radius: 10px;
 }
