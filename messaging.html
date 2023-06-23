@@ -4,6 +4,7 @@
         <title>ym</title>
         <link rel="stylesheet" href="code/chat.css">
         <link rel="stylesheet" href="code/scifiscrollbar.css">
+        <link rel="stylesheet" href="code/boxicons-2.1.4/css/boxicons.css">
     </head>
     <body>
         <div class="container">
@@ -12,11 +13,11 @@
                 <form><label><input id = 'mess-update' type = "checkbox" checked>  Read latest message</label></form>
             </header>
             <div id = "messages">
-
+                <div class="msg"><div class="not-you">This is Uri support, what do you want to ask?</div></div>
             </div>
             <form id = "send-message">
                 <input type = "text" id = "message" autocomplete = "off">
-                <input type = "submit">
+                <button type="submit"><span><div class = "bx bx-send"></div></span></button>
             </form>
         </div>
 
