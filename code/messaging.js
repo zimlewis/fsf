@@ -70,10 +70,11 @@ var initialized = false;
 var messages_holder = document.getElementById("messages");
 // Reference to the 'mess' location
 const messDataRef = ref(db, '/mess/' + mess_of);
+const _messages = ref(db , '/mess/' + mess_of + '/messages')
 var mess_dic;
 
 // Retrieve the data from Firebase
-get(messDataRef)
+get(_messages)
     .then((snapshot) => {
         if (snapshot.exists()) {
             const data = snapshot.val();
@@ -101,23 +102,23 @@ get(messDataRef)
 
 document.getElementById('send-message').addEventListener('submit', function (e) {
     e.preventDefault();
-    if (document.getElementById('message').value != ''){
+    if (document.getElementById('message').value.replace(/\s+/g, ' ').trim() != ''){
         
         var _id = Date.now();
-        set(ref(db, 'mess/' + mess_of + "/" + _id), {
+        set(ref(db, 'mess/' + mess_of + "/messages/" + _id), {
             mess: document.getElementById('message').value,
             sender: user_id,
             receiver: _receiver
         });
-    
-        document.getElementById('send-message').reset();
 
+        set(ref(db, 'mess/' + mess_of + "/read"), false);
 
+        document.getElementById('send-message').reset();        
     }
 });
 
 
-onChildAdded(messDataRef, (snapshot) => {
+onChildAdded(_messages, (snapshot) => {
     if (initialized) {
         if (snapshot.exists()) {
             const child = snapshot.val();
@@ -125,7 +126,6 @@ onChildAdded(messDataRef, (snapshot) => {
         }
     }
 })
-
 
 function add_child_to_mess_list(child) {
     var html = "<div class = 'msg'>";
@@ -138,6 +138,7 @@ function add_child_to_mess_list(child) {
         var objDiv = document.getElementById("messages");
         objDiv.scrollTop = objDiv.scrollHeight;
     }
+
 }
 
 
