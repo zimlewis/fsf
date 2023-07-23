@@ -26,13 +26,13 @@ body, html
 {
   background-color:#000000;
   position: fixed;
-  display: flex;
   width: 100%;
   top: 0;
   z-index: 5;
+  padding: 0;
 }
 
-.h{display: flex;padding: 10px;font-family: roblox;}
+.h{display: inline-block;padding: 10px;font-family: roblox;}
 h1 {font-family: roblox;}
 .but1{width: 100%;text-align: left;}
 .but2{width: 5%;text-align: right; font-size: 20px;}
@@ -124,3 +124,21 @@ ul
   transition: 1s;
   border-radius: 10px;
 }
+
+#right-button{
+  width: 50%;
+  display: inline-block;
+  text-align: right;
+  margin: 0;
+}
+
+
+
+#left-button{
+  width: 49%;
+  display: inline-block;
+  text-align: left;
+  margin: 0;
+
+}
+

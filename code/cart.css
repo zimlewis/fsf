@@ -1,0 +1,68 @@
+.sidenav {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 100%;
+    background-color: black;
+    transition: 0.5s;
+    padding-top: 30px;
+    overflow-x: hidden;
+}
+
+.sidenav *{
+    font-size: 20px;
+    color: white
+}
+
+.sidenav a {
+    padding: 8px 32px 8px 8px; /* Changed padding-left and padding-right */
+    text-decoration: none;
+    color: #ffffff;
+    background-color: black;
+    display: block;
+    transition: 0.3s;
+    width: 100%;
+}
+  
+
+#checkout-btn {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#checkout-btn button {
+    color: #ffffff;
+    border: 0;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+#checkout-btn button a{
+    text-align: center;
+}
+
+.sidenav a:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+
+  
+.sidenav .closebtn {
+    cursor: pointer;
+}
+  
+
+.product{
+    margin: 10px;
+}
+
+#products *{
+    font-size: 10px;
+}

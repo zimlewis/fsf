@@ -1,179 +1,220 @@
 <!DOCTYPE html>
 <html lang="en-UK">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<head>
-    <title>File Select Fusion</title>
-    <link rel="icon" href="media/logo.ico">
-    <link rel="stylesheet" href="code/about.css">
-    <link rel="stylesheet" href="code/scifiscrollbar.css">
-    <link rel="stylesheet" href="code/main.css">
-    <link rel="stylesheet" href="code/boxicons-2.1.4/css/boxicons.css">
-</head>
-<script src = "code/chatbot.js"></script>
-<body>
-    <script src="code/menu.js"></script>
-    <script src="code/slideshow.js"></script>
-    <script src = "code/toggleform.js"></script>
-    <iframe id = "login-form" src = "AccountForm.html"></iframe>
-    <div class="header">
-        <div class="h but1">
-            <div class="dd">
-                <button onclick="menu()" class="ddb">
-                    <img src="media/logo.png" style="width: 60px; height: auto;">
-                    <div class="bx bx-chevron-down" style="color: #ffffff;"></div>
-                </button>
-                <ul id="dropdown" class="ddc">
-                    <li>
-                        <a href="index.html" class="ddi">
-                            <img src="media/logo.png" style="width: 60px; height: auto;" title="File Select Fusion">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://www.yugioh-card.com/en/" class="ddi">
-                            <img src="media/ygo.png" style="width: 60px; height: auto;" title="Yugioh">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://magic.wizards.com/en" class="ddi">
-                            <img src="media/mtg.png" style="width: 60px; height: auto;" title="Magic the Gathering">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://playruneterra.com/en-us/" class="ddi">
-                            <img src="media/lor.png" style="width: 60px; height: auto;" title="Legends of Runeterra">
-                        </a>
-                    </li>
-                </ul>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <title>File Select Fusion</title>
+        <link rel="icon" href="media/logo.ico">
+        <link rel="stylesheet" href="code/about.css">
+        <link rel="stylesheet" href="code/scifiscrollbar.css">
+        <link rel="stylesheet" href="code/main.css">
+        <link rel="stylesheet" href="code/cart.css">
+        <link rel="stylesheet" href="code/boxicons-2.1.4/css/boxicons.css">
+    </head>
+    <script src = "code/chatbot.js"></script>
+    <body>
+        <script src="code/menu.js"></script>
+        <script src="code/slideshow.js"></script>
+        <script src = "code/toggleform.js"></script>
+        <iframe id = "login-form" src = "AccountForm.html"></iframe>
+        <div class="header">
+            <div id = "left-button">
+                <div class="h">
+                    <div class="dd">
+                        <button onclick="menu()" class="ddb">
+                            <img src="media/logo.png" style="width: 60px; height: auto;">
+                            <div class="bx bx-chevron-down" style="color: #ffffff;"></div>
+                        </button>
+                        <ul id="dropdown" class="ddc">
+                            <li>
+                                <a href="index.html" class="ddi">
+                                    <img src="media/logo.png" style="width: 60px; height: auto;" title="File Select Fusion">
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="https://www.yugioh-card.com/en/" class="ddi">
+                                    <img src="media/ygo.png" style="width: 60px; height: auto;" title="Yugioh">
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="https://magic.wizards.com/en" class="ddi">
+                                    <img src="media/mtg.png" style="width: 60px; height: auto;" title="Magic the Gathering">
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="https://playruneterra.com/en-us/" class="ddi">
+                                    <img src="media/lor.png" style="width: 60px; height: auto;" title="Legends of Runeterra">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="h but2">
-            <a onclick = "openAccountPage()" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Account">
-                <p><div class = "bx bx-user-circle"></div></p>
-            </a>
-        </div>
-        <div class="h but3">
-            <a href = "play.html" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Play">
-                <p><div class = "bx bx-play"></div></p>
-            </a>
-        </div>
-    </div>
-
-    <div style="line-height:86px;"><br></div>
-    
-    <div class="banner">
-        <div class="playnow">
-        </div>
-    </div>
-
-    <div class="trailer">
-        <div class="vid">
-            <iframe width="600px" height="400px" style="border: 5px solid #00fff7;" src="https://www.youtube.com/embed/XaXxs0ZvDlc?mute=1"></iframe>
-        </div>
-
-        <div class="vidtxt">
-            <h1>Experience the Chaos</h1>
-            <p>File Select Fusion combines the strategic nature of your regular TCG with party card games.</p>
-            <p>Test your Might with your gamer skills! Test your Luck with stupid RNG elements!</p>
-        </div>
-    </div>
-
-    
-
-    <div class="slideshow">
-        <div class="slidetxt">
-            <h1>Battle through Worlds</h1>
-            <p>Each country brings a different stage for your army to overcome.</p>
-            <p>With each stage comes a different gimmick, completely unique to that stage</p>
-        </div>
-
-        <div class="slider">
-            <div class="slides" style="border: 5px solid #00fff7;">
-                <div class="slide">
-                    <img src="media/slide4.png">
-                    <img src="media/slide3.jpg">
-                    <img src="media/slide2.jpg">
-                    <img src="media/slide1.jpg">
-                    <img src="media/slide4.png">
+            <div id = "right-button">
+                <div class="h">
+                    <span onclick = "openAccountPage()" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Account">
+                        <p><div class = "bx bx-user-circle"></div></p>
+                    </span>
+                </div>
+                <div class="h">
+                    <a href = "play.html" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Play">
+                        <p><div class = "bx bx-play"></div></p>
+                    </a>
+                </div>
+                <div class="h">
+                    <span onclick = "toggleNav()" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Open Cart">
+                        <p><div class = "bx bx-cart"></div></p>
+                    </span>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="cardshowcaseheader">
-        <h1>Adapt new Playstyles</h1>
-        <p>With each country comes a new culture. With each culture brings a new playstyle</p>
-        <p>Mix and match your army to create perfect sygnergies</p>
-    </div>
-
-    <div class="cardshowcase">
-        <iframe scrolling="no" src = "https://zimlewis.github.io/cardshowcase/"></iframe>
-    </div>
-
-    <img onclick = "toggle_chat()" id = "chat-bubble-toggle" src = 'media/urichat.png'/>
-    <iframe id = "chat-bubble" src = "messaging.html"></iframe>
-    
-    <script src = 'code/chat_toggle.js'></script>
-
-
-</body>
-<footer>
-    <div class="foot">
-        <div class="char">
-            <img src="media/jak.png" width="100%">
+        <div style="line-height:86px;"><br></div>
+        
+        <div class="banner">
+            <div class="playnow">
+            </div>
         </div>
 
-        <div class="box">
-
-            <div class="txttop">
-                <h1>Contact Us</h1>
+        <div class="trailer">
+            <div class="vid">
+                <iframe width="100%" height="100%" style="border: 5px solid #00fff7;" src="https://www.youtube.com/embed/XaXxs0ZvDlc?mute=1"></iframe>
             </div>
 
-            <ul>
-                <div class="socials">
+            <div class="vidtxt">
+                <h1>Experience the Chaos</h1>
+                <p>File Select Fusion combines the strategic nature of your regular TCG with party card games.</p>
+                <p>Test your Might with your gamer skills! Test your Luck with stupid RNG elements!</p>
+            </div>
+        </div>
 
-                    <li>
-                        <a style="text-decoration:none; color:#000000;" href="https://www.youtube.com/channel/UCPahLuD23UxaG51kF8pYpcw" target="_blank">
-                            <div class="bx bxl-youtube"></div>
-                            <div class="socialinfo">Youtube</div>
-                        </a>
-                    </li>
+        
 
-                    <li>
-                        <a style="text-decoration:none; color:#000000;" href="https://discord.gg/CdpWPHPMQW" target="_blank">
-                            <div class="bx bxl-discord"></div>
-                            <div class="socialinfo">Discord</div>
-                        </a>
-                    </li>
+        <div class="slideshow">
+            <div class="slidetxt">
+                <h1>Battle through Worlds</h1>
+                <p>Each country brings a different stage for your army to overcome.</p>
+                <p>With each stage comes a different gimmick, completely unique to that stage</p>
+            </div>
 
-                    <li>
-                        <a style="text-decoration:none; color:#000000;" href="https://twitter.com/fsf_bzstudios" target="_blank">
-                            <div class="bx bxl-twitter"></div>
-                            <div class="socialinfo">Twitter</div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a style="text-decoration:none; color:#000000;" href="https://www.facebook.com/profile.php?id=100092621487529" target="_blank">
-                            <div class="bx bxl-facebook-square"></div>
-                            <div class="socialinfo">Facebook</div>
-                        </a>
-                    </li>
-
+            <div class="slider">
+                <div class="slides" style="border: 5px solid #00fff7;">
+                    <div class="slide">
+                        <img src="media/slide4.png">
+                        <img src="media/slide3.jpg">
+                        <img src="media/slide2.jpg">
+                        <img src="media/slide1.jpg">
+                        <img src="media/slide4.png">
+                    </div>
                 </div>
-            </ul>
-
-            <div class="txtbottom">
-                <p>@2023 BZ Studios</p>
             </div>
-
         </div>
 
-        <div class="char">
-            <img src="media/mayo.png" width="100%">
+        <div class="cardshowcaseheader">
+            <h1>Adapt new Playstyles</h1>
+            <p>With each country comes a new culture. With each culture brings a new playstyle</p>
+            <p>Mix and match your army to create perfect sygnergies</p>
         </div>
-    </div>
-</footer>
+
+        <div class="cardshowcase">
+            <iframe scrolling="no" src = "https://zimlewis.github.io/cardshowcase/"></iframe>
+        </div>
+
+        <img onclick = "toggle_chat()" id = "chat-bubble-toggle" src = 'media/urichat.png'/>
+        <iframe id = "chat-bubble" src = "messaging.html"></iframe>
+        
+        <footer>
+            <div class="foot">
+                <div class="char">
+                    <img src="media/jak.png" width="100%">
+                </div>
+        
+                <div class="box">
+        
+                    <div class="txttop">
+                        <h1>Contact Us</h1>
+                    </div>
+        
+                    <ul>
+                        <div class="socials">
+        
+                            <li>
+                                <a style="text-decoration:none; color:#000000;" href="https://www.youtube.com/channel/UCPahLuD23UxaG51kF8pYpcw" target="_blank">
+                                    <div class="bx bxl-youtube"></div>
+                                    <div class="socialinfo">Youtube</div>
+                                </a>
+                            </li>
+        
+                            <li>
+                                <a style="text-decoration:none; color:#000000;" href="https://discord.gg/CdpWPHPMQW" target="_blank">
+                                    <div class="bx bxl-discord"></div>
+                                    <div class="socialinfo">Discord</div>
+                                </a>
+                            </li>
+        
+                            <li>
+                                <a style="text-decoration:none; color:#000000;" href="https://twitter.com/fsf_bzstudios" target="_blank">
+                                    <div class="bx bxl-twitter"></div>
+                                    <div class="socialinfo">Twitter</div>
+                                </a>
+                            </li>
+        
+                            <li>
+                                <a style="text-decoration:none; color:#000000;" href="https://www.facebook.com/profile.php?id=100092621487529" target="_blank">
+                                    <div class="bx bxl-facebook-square"></div>
+                                    <div class="socialinfo">Facebook</div>
+                                </a>
+                            </li>
+        
+                        </div>
+                    </ul>
+        
+                    <div class="txtbottom">
+                        <p>@2023 BZ Studios</p>
+                    </div>
+        
+                </div>
+        
+                <div class="char">
+                    <img src="media/mayo.png" width="100%">
+                </div>
+            </div>
+        </footer> 
+
+        <div id="mySidenav" class="sidenav">
+            <a class = "closebtn" onclick = "toggleNav()">&times;</a>
+            <div id = "products">
+            </div>
+            <div id = "checkout-btn">
+                <a href = "checkout.html">Check out</a>
+            </div>
+    
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.left = "80%";
+                navOpen = true;
+            }
+            
+            function closeNav() {
+                document.getElementById("mySidenav").style.left = "100%";
+                navOpen = false
+            }
+            
+            var navOpen = false;
+            function toggleNav() {
+                if (navOpen) {
+                    closeNav();
+                } else {
+                    openNav();
+                }
+            }
+        </script>
+        <script type = "module" src = 'code/cart.js'></script>
+
+        <script src = 'code/chat_toggle.js'></script>
+
+    </body>
+</html>

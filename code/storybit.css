@@ -1,0 +1,67 @@
+@font-face {font-family: roblox;src: url(../media/font/RollboxMedium-JRxYB.ttf);}
+*{margin:0;padding:0;box-sizing: border-box;}
+
+body
+{
+    width: 100vw;
+    height: 100vh;
+    font-family: roblox;
+    color: #00fff7;
+    background-color: #0a1e31;
+    overflow-x: hidden;
+}
+
+.bannerbox, .banner, .basicinfoheader
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basicinfobox
+{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 10px;
+    margin-left: 30px;
+}
+
+.basicinfobox
+{
+    color: #bcbcbc;
+    font-size: 25px;
+}
+
+.basicinfobox b
+{
+    color: #00fff7;
+}
+
+.basicinfoheader h1
+{
+    font-size: 5vw;
+}
+
+.banner img
+{
+    max-width: 600px;
+    height: auto;
+}
+
+.basicinfo
+{
+    width: 120%;
+    height: auto;
+}
+
+.storybox
+{
+    color: #bcbcbc;
+    font-size: 20px;
+}
+
+.storybox p
+{
+    margin: 50px;
+}

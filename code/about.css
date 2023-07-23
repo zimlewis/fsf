@@ -46,12 +46,25 @@ hr
   width: 100%;
 }
 
-.trailer{display: flex;background-color:#0a1e31;font-family: 'Times New Roman', Times, serif;}
+.trailer{
+  display: flex;
+  position: relative;
+  height: 80vh;
+  background-color:#0a1e31;
+  font-family: 'Times New Roman', Times, serif;
+}
 
-.vid{width: 20%; margin: auto;padding: 30px;}
+.vid{
+  width: 50%; 
+  height: 80%;
+  margin: auto;
+  padding: 30px;
+  
+}
 .vidtxt
 {
-  width: 30%;
+  width: 50%; 
+  height: 80%;
   margin: auto;
   text-align: center;
   color: #bcbcbc;
@@ -62,7 +75,7 @@ hr
 {
   display: flex;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/bg1.jpg);
-  height: auto;
+  height: 80vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -71,7 +84,8 @@ hr
 
 .slidetxt
 {
-  width: 60%;
+  width: 50%; 
+  height: 80%;
   margin: auto;
   margin-left: 18%;
   text-align: center;
@@ -85,7 +99,8 @@ hr
   display: flex;
   margin: auto;
   margin-left: 0;
-  width: 500px;
+  width: 100%; 
+  height: 80%;
 }
 
 .slide img
@@ -145,7 +160,7 @@ footer
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/bannerbg.png");
   height: 50%;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   font-family: roblox;
 }
@@ -165,10 +180,9 @@ footer
 .box
 {
   background:linear-gradient(90deg, hsl(270 100% 50%), hsl(300 100% 50%), cyan);
-  aspect-ratio: 20/8;
-  width: 3800px;
+  width: 80%;
+  height: 100%;
   border-radius: 10px;
-  margin-top: 20px;
 }
 
 .socialinfo

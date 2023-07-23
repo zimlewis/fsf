@@ -1,0 +1,134 @@
+@font-face {font-family: roblox;src: url(../media/font/RollboxMedium-JRxYB.ttf);}
+*{margin:0;padding:0;box-sizing: border-box;}
+
+body
+{
+    width: 100vw;
+    height: 100vh;
+    font-family: roblox;
+    color: #00fff7;
+    background-color: #0a1e31;
+    overflow-x: hidden;
+}
+
+textarea
+{
+    outline: 0;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 20px;
+    color: #00fff7;
+    background-color: #135077;
+    resize: none;
+    width: 95%
+}
+
+
+textarea::placeholder, input::placeholder
+{
+    color: #00fff7;
+}
+
+textarea:focus
+{
+    box-shadow: 0px 0px 0px 2px #00fff7 inset;
+}
+
+textarea::-webkit-scrollbar
+{
+    display: none;
+}
+
+input
+{
+    outline: 0;
+    border: none;
+    width: 50%;
+    border-radius: 10px;
+    padding: 10px 10px;
+    color: #00fff7;
+    background-color: #135077;
+}
+
+input:focus
+{
+    box-shadow: 0px 0px 0px 2px #00fff7 inset;
+}
+
+.header
+{
+    height: 100px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.creationbody, .preview, .output, .card, .part
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create
+{
+    width: 50%;
+    margin-left: 15px;
+}
+
+.update
+{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+
+.updatebutton
+{
+    text-align: center;
+    border: 2px solid #00fff7;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 6px;
+    
+    user-select: none;
+}
+
+.updatebutton:hover
+{
+    cursor: pointer;
+    background-color: #00fff7;
+    color: #0a1e31;
+}
+
+.midcol
+{
+    background-color: #00fff7;
+    width: 3px;
+    height: 80vh;
+    margin: 5px;
+}
+
+.result
+{
+    width: 50%;
+    height: auto;
+}
+
+.card
+{
+    width: auto;
+    height: 50%;
+}
+
+.card img
+{
+    width: 20%;
+    height: auto;
+}
+
+.output
+{
+    margin-top: 10px;
+}

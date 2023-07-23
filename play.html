@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="code/scifiscrollbar.css">
         <link rel="stylesheet" href="code/main.css">
         <link rel="stylesheet" href="code/playpage.css">
+        <link rel="stylesheet" href="code/cart.css">
         <link rel="stylesheet" href="code/boxicons-2.1.4/css/boxicons.css">
     </head>
     <body>
@@ -14,52 +15,59 @@
         <script src = "code/toggleform.js"></script>
         <iframe id = "login-form" src = "AccountForm.html"></iframe>
         <div class="header">
-            <div class="h but1">
-                <div class="dd">
-                    <button onclick="menu()" class="ddb">
-                        <img src="media/logo.png" style="width: 60px; height: auto;">
-                        <div class="bx bx-chevron-down" style="color: #ffffff;"></div>
-                    </button>
-                    <ul id="dropdown" class="ddc">
-                        <li>
-                            <a href="index.html" class="ddi">
-                                <img src="media/logo.png" style="width: 60px; height: auto;" title="File Select Fusion">
-                            </a>
-                        </li>
+            <div id = "left-button">
+                <div class="h">
+                    <div class="dd">
+                        <button onclick="menu()" class="ddb">
+                            <img src="media/logo.png" style="width: 60px; height: auto;">
+                            <div class="bx bx-chevron-down" style="color: #ffffff;"></div>
+                        </button>
+                        <ul id="dropdown" class="ddc">
+                            <li>
+                                <a href="index.html" class="ddi">
+                                    <img src="media/logo.png" style="width: 60px; height: auto;" title="File Select Fusion">
+                                </a>
+                            </li>
     
-                        <li>
-                            <a href="https://www.yugioh-card.com/en/" class="ddi">
-                                <img src="media/ygo.png" style="width: 60px; height: auto;" title="Yugioh">
-                            </a>
-                        </li>
+                            <li>
+                                <a href="https://www.yugioh-card.com/en/" class="ddi">
+                                    <img src="media/ygo.png" style="width: 60px; height: auto;" title="Yugioh">
+                                </a>
+                            </li>
     
-                        <li>
-                            <a href="https://magic.wizards.com/en" class="ddi">
-                                <img src="media/mtg.png" style="width: 60px; height: auto;" title="Magic the Gathering">
-                            </a>
-                        </li>
+                            <li>
+                                <a href="https://magic.wizards.com/en" class="ddi">
+                                    <img src="media/mtg.png" style="width: 60px; height: auto;" title="Magic the Gathering">
+                                </a>
+                            </li>
     
-                        <li>
-                            <a href="https://playruneterra.com/en-us/" class="ddi">
-                                <img src="media/lor.png" style="width: 60px; height: auto;" title="Legends of Runeterra">
-                            </a>
-                        </li>
-                    </ul>
+                            <li>
+                                <a href="https://playruneterra.com/en-us/" class="ddi">
+                                    <img src="media/lor.png" style="width: 60px; height: auto;" title="Legends of Runeterra">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-    
-            <div class="h but2">
-                <a onclick = "openAccountPage()" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Account">
-                    <p><div class = "bx bx-user-circle"></div></p>
-                </a>
-            </div>
-            <div class="h but3">
-                <a href = "play.html" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Play">
-                    <p><div class = "bx bx-play"></div></p>
-                </a>
+            <div id = "right-button">
+                <div class="h">
+                    <span onclick = "openAccountPage()" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Account">
+                        <p><div class = "bx bx-user-circle"></div></p>
+                    </span>
+                </div>
+                <div class="h">
+                    <a href = "play.html" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Play">
+                        <p><div class = "bx bx-play"></div></p>
+                    </a>
+                </div>
+                <div class="h">
+                    <span onclick = "toggleNav()" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Open Cart">
+                        <p><div class = "bx bx-cart"></div></p>
+                    </span>
+                </div>
             </div>
         </div>
-
         <div class="productheader">
             <h1>Buy our products!</h1>
         </div>
@@ -69,7 +77,7 @@
                 <tr >
                   <th class = "left-column">
                     <div class="leftproducts">
-                        <div class="product">
+                        <div class="-product">
                             <div class="productimage">
                                 <img src="media/cardbox.png">
                             </div>
@@ -82,7 +90,7 @@
                             </div>
                         </div>
         
-                        <div class="product">
+                        <div class="-product">
                             <div class="productimage">
                                 <img src="media/cardbox.png">
                             </div>
@@ -124,58 +132,42 @@
 
 
         </div>
-        <script>
-            const b1 = document.getElementById("buy-1")
-            const b2 = document.getElementById("buy-2")
-            const join = document.getElementById("join")
-            const create = document.getElementById("create")
-            const room_id = document.getElementById("room-id")
-        
-        
-            b1.addEventListener('click' , () => {
-                const product_name = "Standard Vanila";
-                const product_pirce = "$6.99";
-                buy(product_pirce , product_name);
-            })
-            b2.addEventListener('click' , () => {
-                const product_name = "Collector's edition";
-                const product_pirce = "$42.69";
-                buy(product_pirce , product_name);
-            })
-            
-
-            join.addEventListener('click' , () => {
-                const type = "join";
-                const id = room_id.value;
-
-                play(type , id)
-            })
-
-            create.addEventListener('click' , () => {
-                const type = "create";
-
-                play(type)
-            })
-
-            function buy(price , name){
-                localStorage.setItem("pName" , price);
-                localStorage.setItem("pPrice" , name);
-        
-                window.location.href = "checkout.html";
-            }
-
-            function play(type , id = 0){
-                localStorage.setItem("type" , type);
-                if (id != 0){
-                    localStorage.setItem("id" , id);   
-                }
-            }
-
-        </script>
+        <script type = "module" src = "code/play.js"></script>
         
         <img onclick = "toggle_chat()" id = "chat-bubble-toggle" src = 'media/urichat.png'/>
         <iframe id = "chat-bubble" src = "messaging.html"></iframe>
         
+        <div id="mySidenav" class="sidenav">
+            <a class = "closebtn" onclick = "toggleNav()">&times;</a>
+            <div id = "products">
+            </div>
+            <div id = "checkout-btn">
+                <a href = "checkout.html">Check out</a>
+            </div>
+    
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.left = "80%";
+                navOpen = true;
+            }
+            
+            function closeNav() {
+                document.getElementById("mySidenav").style.left = "100%";
+                navOpen = false
+            }
+            
+            var navOpen = false;
+            function toggleNav() {
+                if (navOpen) {
+                    closeNav();
+                } else {
+                    openNav();
+                }
+            }
+        </script>
+        <script type = "module" src = 'code/cart.js'></script>
+
         <script src = 'code/chat_toggle.js'></script>
 
     </body>
