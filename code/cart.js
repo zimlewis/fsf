@@ -68,7 +68,7 @@ let user_id = getOrGenerateUserID();
 const cart = ref(db, '/cart/' + user_id);
 const products = ref(db , '/cart/' + user_id + '/products')
 
-window.onload = (event) => {
+function update() {
     const pc = document.getElementById("products");
 
     get(products)
@@ -96,4 +96,7 @@ window.onload = (event) => {
     .catch((error) => {
         console.error("Error retrieving Firebase data:", error);
     });
+    window.requestAnimationFrame(update);
 };
+
+window.requestAnimationFrame(update);
