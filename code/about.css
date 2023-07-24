@@ -99,8 +99,6 @@ hr
   display: flex;
   margin: auto;
   margin-left: 0;
-  width: 100%; 
-  height: 80%;
 }
 
 .slide img
@@ -155,35 +153,7 @@ hr
   padding: 0;
 }
 
-footer
-{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/bannerbg.png");
-  height: 50%;
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-  font-family: roblox;
-}
 
-.foot
-{
-  text-align: center;
-  display: flex;
-}
-
-.char
-{
-  width: 100%;
-  flex-direction: column;
-}
-
-.box
-{
-  background:linear-gradient(90deg, hsl(270 100% 50%), hsl(300 100% 50%), cyan);
-  width: 80%;
-  height: 100%;
-  border-radius: 10px;
-}
 
 .socialinfo
 {
@@ -254,4 +224,34 @@ footer
   min-height: 100%; 
   transition: 0.5s;
   display: none;
+}
+
+
+.foot
+{
+  text-align: center;
+  display: flex;
+}
+
+footer
+{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/bannerbg.png");
+  min-height: fit-content;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.char
+{
+  width: 100%;
+  flex-direction: column;
+}
+
+.box
+{
+  background:linear-gradient(90deg, hsl(270 100% 50%), hsl(300 100% 50%), cyan);
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

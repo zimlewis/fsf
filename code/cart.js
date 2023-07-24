@@ -84,7 +84,6 @@ function update() {
             for (const key in data) {
                 if (Object.hasOwnProperty.call(data, key)) {
                     const child = data[key];
-                    console.log(pc);
                     html += "<span class = 'product'>" + key + ": " + child.quantity + " </span><br>";
                 }
             }
