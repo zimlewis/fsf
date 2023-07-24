@@ -72,33 +72,9 @@ hr
   vertical-align: center;
 }
 
-footer
-{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/bannerbg.png");
-  height: 50%;
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-}
 
-.foot
-{
-  text-align: center;
-  display: flex;
-}
 
-.char
-{
-  width: 100%;
-  flex-direction: column;
-}
 
-.box
-{
-  background:linear-gradient(90deg, hsl(270 100% 50%), hsl(300 100% 50%), cyan);
-  border-radius: 10px;
-
-}
 
 .socialinfo
 {
@@ -153,4 +129,33 @@ iframe[name = "content"]
   height : 1000px;
   overflow-x: hidden;
   overflow-y: scroll;
+}
+
+.foot
+{
+  text-align: center;
+  display: flex;
+}
+
+footer
+{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/bannerbg.png");
+  min-height: fit-content;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.char
+{
+  width: 100%;
+  flex-direction: column;
+}
+
+.box
+{
+  background:linear-gradient(90deg, hsl(270 100% 50%), hsl(300 100% 50%), cyan);
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

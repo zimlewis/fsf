@@ -111,14 +111,8 @@ function buy(product){
     // Retrieve the data from Firebase
     get(products)
         .then((snapshot) => {
-            if (snapshot.exists()) {
+            try {
                 const data = snapshot.val();
-
-                // Now you have the Firebase data in the 'data' variable
-                // You can proceed to access and manipulate it as needed
-
-                // Example: Accessing the child parts of 'mess'
-
                 for (const key in data) {
                     if (Object.hasOwnProperty.call(data, key)) {
                         const child = data[key];
@@ -133,8 +127,9 @@ function buy(product){
                     price : product.price,
                     quantity: p_quantity
                 });
-            } else {
-                console.log("No data available.");
+            }
+            catch(err){
+                
             }
         })
         .catch((error) => {
