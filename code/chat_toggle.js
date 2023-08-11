@@ -15,3 +15,4 @@
                 open_chat = true
             }
         }
+        

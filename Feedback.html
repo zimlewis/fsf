@@ -1,46 +1,117 @@
 <!DOCTYPE html>
 <html lang="en-UK">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="code/scifiscrollbar.css">
         <link rel="stylesheet" href="code/feedback.css">
+        <link rel="stylesheet" href="code/main.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="code/boxicons-2.1.4/css/boxicons.css">
     </head>
     <body>
+        <header>
+            <a href = "index.html" class = "logo">  
+                <img src = "media/logofsf.png" title = "file select fusion"> 
+            </a>
+            <input type = "checkbox" id = "menu-bar" />
+            
 
-        <div id="mySidenav" class="sidenav">
+            <nav class = "navbar">
 
-            <div class="subsideNav">
-                <button class="subsidenavbtn">Downloading the Game</button>
-                <div class="subsidenav-content">
-                    <a>My steam code is not working</a>
-                    <a>TTS version is not loading assets</a>
-                    <a>Screentop version is lagging</a>
+                <ul>
+                    <li><a href = "index.html">Home</a></li>
+                    <li><a href = "About.html">About us</a></li>
+                    <li><a href = "Feedback.html">Feedback</a></li>
+                    <li><a href = "youraccount.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href = "play.html" id = "play" href = "" class = "logo">  
+                Play
+            </a>
+            <a href = "cart.html" id = "play" href = "" class = "logo">  
+                <i class='bx bxs-cart'></i>
+            </a>
+            
+            <label for = "menu-bar"><i class='bx bx-menu'></i></label>
+        </header>
+
+        <div class="container">
+            <div id="mySidenav" class="sidenav">
+
+                <div class="subsideNav">
+                    <button class="subsidenavbtn">Downloading the Game</button>
+                    <div class="subsidenav-content">
+                        <a>My steam code is not working</a>
+                        <a>TTS version is not loading assets</a>
+                        <a>Screentop version is lagging</a>
+                    </div>
+                </div>
+    
+                <div class="subsideNav">
+                    <button class="subsidenavbtn">Refund</button>
+                    <div class="subsidenav-content">
+                        <a>How do I refund?</a>
+                        <a>Can I get a refund after opening the box?</a>
+                    </div>
+                </div>
+    
+                <div class="subsideNav">
+                    <button class="subsidenavbtn">Donate</button>
+                    <div class="subsidenav-content">
+                        <a>Where can I support the game?</a>
+                        <a>I want to give you money</a>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <form>
+                <textarea placeholder = "Have another question?"></textarea>
+                <div class="input">
+                    <input placeholder = "Name" type = "text" id="name" name="name">
+                    <input placeholder = "Email" type = "email" id="email" name="email">
+                </div>
+                <button type = "button">Submit</button>
+            </form>
+        </div> 
+
+        
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Our games</h4>
+                        <ul>
+                            <li><a href="https://gamejolt.com/@dimlelquit">Gamejolt</a></li>
+                            <li><a href="https://gamejolt.com/@dimlelquit">Itch.io</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow us</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=100092621487529"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://discord.gg/CdpWPHPMQW"><i class="fab fa-discord"></i></a>
+                            <a href="https://twitter.com/fsf_bzstudios"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/channel/UCPahLuD23UxaG51kF8pYpcw"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact us</h4>
+                        <ul>
+                            <li><a onclick = "copyText(this.innerText)" href="tel:0355361405">09696942069</a></li>
+                            <li><a onclick = "copyText(this.innerText)" href="mailto:z1ml3w1s123@gmail.com">bz.indiestudio@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Copyright</h4>
+                        <ul>
+                            <li><a href="">Terms of Service</a></li>
+                            <li><a href="">EULA Agreement</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
-            <div class="subsideNav">
-                <button class="subsidenavbtn">Refund</button>
-                <div class="subsidenav-content">
-                    <a>How do I refund?</a>
-                    <a>Can I get a refund after opening the box?</a>
-                </div>
-            </div>
-
-            <div class="subsideNav">
-                <button class="subsidenavbtn">Donate</button>
-                <div class="subsidenav-content">
-                    <a>Where can I support the game?</a>
-                    <a>I want to give you money</a>
-                </div>
-            </div>
-
-        </div>
-
-        <form>
-            <textarea placeholder = "Have another question?"></textarea>
-            <input placeholder = "Name" type = "text" id="name" name="name">
-            <input placeholder = "Email" type = "email" id="email" name="email">
-            <button type = "button">Submit</button>
-        </form>
-
+       </footer>
     </body>
 </html>

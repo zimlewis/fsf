@@ -3,74 +3,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <head>
         <link rel = "stylesheet" href = "code/AccountForm.css">
-        <link rel="stylesheet" href="code/scifiscrollbar.css">
+        <link rel = "stylesheet" href = "code/scifiscrollbar.css">
+        <link rel = "stylesheet" href = "code/main.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel = "icon" href = "media/logo.ico">
+        <link rel="stylesheet" href="code/boxicons-2.1.4/css/boxicons.css">
+
+
+        <title>Login / Sign in</title>
     </head>
     <body>
+        <header>
+            <a href = "index.html" class = "logo">  
+                <img src = "media/logofsf.png" title = "file select fusion"> 
+            </a>
+            <input type = "checkbox" id = "menu-bar" />
+            
+
+            <nav class = "navbar">
+
+                <ul>
+                    <li><a href = "index.html">Home</a></li>
+                    <li><a href = "About.html">About us</a></li>
+                    <li><a href = "Feedback.html">Feedback</a></li>
+                    <li><a href = "youraccount.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href = "play.html" id = "play" href = "" class = "logo">  
+                Play
+            </a>
+            <a href = "cart.html" id = "play" href = "" class = "logo">  
+                <i class='bx bxs-cart'></i>
+            </a>
+            
+            <label for = "menu-bar"><i class='bx bx-menu'></i></label>
+        </header>
+
         <div class = "container">
-            <form>
-                <div class = "form-content">
-                    <span onclick = "close_site()" style = "cursor: pointer;" class="closebtn">&times;</span>
-                    <h1>Login</h1>
-                    <p>Please fill in this form to login into account.</p>
-                    <hr>
-                
-                    <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email" id="email" required>
-                
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-                
-
-                    <input type = "checkbox"><label>Remember me</label>
-                
-                    <button type="button" class="registerbtn">Login</button>
+            <div class = "main">
+                <input aria-hidden = "true" type = "checkbox" name = "chk" id = "chk" checked>
+            
+                <div class = "sign-up">
+                    <form>
+                        <label aria-hidden = "true" for = "chk">Sign In</label>
+                        <input type = "email" id = "sign-up-email" name = "email" placeholder = "Email"  required/>
+                        <input type = "text" id = "sign-up-username" name = "username" placeholder = "Username"  required/>
+                        <input type = "password" id = "sign-up-password-1" name = "password-1" placeholder = "Password" required/>
+                        <input type = "password" id = "sign-up-password-2" name = "password-2" placeholder = "Confirm password" required/>
+                        <button id = "sign-up-btn">Sign Up</button>
+                    </form>
                 </div>
-            </form>
-            <form>
-                <div class = "form-content">
-                    <span onclick = "close_site()" style = "cursor: pointer;" class="closebtn">&times;</span>
-                    <h1>Register</h1>
-                    <p>Please fill in this form to create an account.</p>
-                    <hr>
-                
-                    <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email" id="email" required>
-                
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-                
-                    <label for="psw-repeat"><b>Repeat Password</b></label>
-                    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-
-                    <p>By creating an account you agree to our <a target="_blank" href="https://r.mtdv.me/FAuOFekHbA">Terms & Privacy</a>.</p>
-                
-                    <button type="button" class="registerbtn">Register</button>
+    
+                <div class = "login">
+                    <form>
+                        <label aria-hidden = "true" for = "chk">Login</label>
+                        <input type = "email" id = "login-email" name = "email" placeholder = "Email" required/>
+                        <input type = "password" id = "login-password" name = "password" placeholder = "Password" required/>
+                        <button id = "login-btn">Login</button>
+                        <button id = "login-facebook">Login with <i class='bx bxl-facebook' ></i></button>
+                        <button id = "login-google">Login with <i class='bx bxl-google' ></i></button>
+    
+                    </form>
                 </div>
-            </form>
-            <div id = "cover">
-                <button onclick = "change_site()" id = "change-site">Register</button>
             </div>
         </div>
-        <script>
-            var l = 1;
-            function change_site(){
-                var cv = document.getElementById("cover");
-                var btn = document.getElementById("change-site");
-                if (l == 1){
-                    cv.style.left = 0;
-                    btn.innerHTML = "Login"
-                    l = 0
-                }
-                else if (l == 0){
-                    cv.style.left = "50%";
-                    btn.innerHTML = "Register"
-                    l = 1;
-                }
-            }
 
-            function close_site(){
-                parent.closeAccountPage();
-            }
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Our games</h4>
+                        <ul>
+                            <li><a href="https://gamejolt.com/@dimlelquit">Gamejolt</a></li>
+                            <li><a href="https://gamejolt.com/@dimlelquit">Itch.io</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow us</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=100092621487529"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://discord.gg/CdpWPHPMQW"><i class="fab fa-discord"></i></a>
+                            <a href="https://twitter.com/fsf_bzstudios"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/channel/UCPahLuD23UxaG51kF8pYpcw"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact us</h4>
+                        <ul>
+                            <li><a onclick = "copyText(this.innerText)" href="tel:0355361405">09696942069</a></li>
+                            <li><a onclick = "copyText(this.innerText)" href="mailto:z1ml3w1s123@gmail.com">bz.indiestudio@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Copyright</h4>
+                        <ul>
+                            <li><a href="">Terms of Service</a></li>
+                            <li><a href="">EULA Agreement</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+       </footer>
+
+        <script>
+        function copyText(text) {
+            /* Copy text into clipboard */
+            navigator.clipboard.writeText
+                (text);
+        }
         </script>
+
+        <input type = "checkbox" name = "" id = "chat-toggle-check">
+        <label for = "chat-toggle-check"><img id = "chat-bubble-toggle" src = 'media/urichat.png'/></label>
+        <iframe id = "chat-bubble" src = "messaging.html"></iframe>
+
+        <script src = "code/noftification.js"></script>
+        <script type="module" src = "code/account.js"></script>
     </body>
 </html>

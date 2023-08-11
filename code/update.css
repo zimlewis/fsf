@@ -1,56 +1,56 @@
-@font-face {font-family: roblox;src: url(../media/font/RollboxMedium-JRxYB.ttf);}
-
-body
-{
-  margin: 0;
-  padding: 0;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white
 }
 
-table
-{
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(280px , 305px));
+    justify-content: center;
+    width: 80vw;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    gap: 1.5rem;
+}
+
+.topic{
+    border: 2px cyan solid;
+    padding: 15px;
+    border-radius: 0.5rem;
+}
+.topic-img{
     width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
 }
-
-td
-{
-    border: 2px solid #00fff7;
-    padding: 5px;
-    min-width: 100%;
+.title{
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
-
-
-a
-{
-    padding: 10px;
-    color: #bcbcbc;
-    font-size: 20px;
-    width: 100%;
+.date{
+    display: flex;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 4px;
 }
-
-.img
-{
-    width: 30%;
-    float: left;
-}
-
-.desc
-{
-    float: left;
-    width: 60%;
-    margin-left: 20px;
-}
-
-img
-{
-    width: 100%;
-}
-
-h2
-{
-    font-family: roblox;
-}
-
-p
-{
-    font-family: 'Times New Roman', Times, serif;
+.desc{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin: 5px 0 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden
 }

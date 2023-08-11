@@ -1,153 +1,99 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
-import { getDatabase, onChildAdded, ref, set, get } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+import { getDatabase , get , child , ref , set , update} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-
-
 // Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyCAjyH7V8LBCcE0Wdt9Qb42Ii-cwUcgjOc",
-    authDomain: "file-select-fusion-support.firebaseapp.com",
-    databaseURL: "https://file-select-fusion-support-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "file-select-fusion-support",
-    storageBucket: "file-select-fusion-support.appspot.com",
-    messagingSenderId: "1016905256934",
-    appId: "1:1016905256934:web:d6da4f1306cfcc9a625027"
+    apiKey: "AIzaSyDRuIyes_Popym7c0YqrJVt-e0FH841ES0",
+    authDomain: "file-select-fusion.firebaseapp.com",
+    databaseURL: "https://file-select-fusion-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "file-select-fusion",
+    storageBucket: "file-select-fusion.appspot.com",
+    messagingSenderId: "620293994625",
+    appId: "1:620293994625:web:944f801a45d66647be7580",
+    measurementId: "G-HZM121BLM3"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+const database = getDatabase(app);
 
-var db = getDatabase(app);
+const buy_btns = document.querySelectorAll('.product');
+const create_room_btn = document.querySelector('#create-room button');
+const join_room_btn = document.querySelector('#join-room button');
 
-
-function getOrGenerateUserID() {
-    const cookieName = 'userID';
-    let userID = getCookie(cookieName);
-
-    if (!userID) {
-        // Generate a new user ID
-        userID = generateUserID();
-        // Store the user ID in a cookie
-        setCookie(cookieName, userID, 365); // Expires in 365 days
-    }
-
-    return userID;
+create_room_btn.onclick = () => {
+    //Create the room
+    localStorage.setItem('play_type' , 'create');
+    location.href = 'playdigital.html'
 }
 
-function generateUserID() {
-    // Generate a unique ID using a suitable method (e.g., UUID library)
-    // Example using a simple implementation
-    return Date.now().toString();
-}
+join_room_btn.onclick = () => {
+    //get the room id
+    const room_id = document.querySelector('#join-room input').value;
+    //join the room
+    localStorage.setItem('play_type' , 'join');
+    localStorage.setItem('play_id' , room_id);
 
-function getCookie(name) {
-    const value = '; ' + document.cookie;
-    const parts = value.split('; ' + name + '=');
-    if (parts.length === 2) {
-        return parts.pop().split(';').shift();
-    }
-    return null;
-}
-
-function setCookie(name, value, days) {
-    const date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    const expires = 'expires=' + date.toUTCString();
-    document.cookie = name + '=' + value + ';' + expires + ';path=/';
+    location.href = 'playdigital.html'
 }
 
 
-let user_id = getOrGenerateUserID();
-
-const cart = ref(db, '/cart/' + user_id);
-const products = ref(db , '/cart/' + user_id + '/products')
-
-
-
-const b1 = document.getElementById("buy-1")
-const b2 = document.getElementById("buy-2")
-const join = document.getElementById("join")
-const create = document.getElementById("create")
-const room_id = document.getElementById("room-id")
+const products_dict = {
+    "Standard Vanila" : {
+        price: 6.9
+    },
+    "Collector's Edition" : {
+        price: 420.69
+    },
+}
 
 
-b1.addEventListener('click' , () => {
-    const product_name = "Standard Vanila";
-    const product_pirce = "$6.99";
-    const product = {
-        "name" : "Standard Vanila",
-        "price" : 6.99,
-    }
-    buy(product);
-})
-b2.addEventListener('click' , () => {
-    const product = {
-        "name" : "Collector's edition",
-        "price" : 42.69,
-    }
-    buy(product);
-})
-
-
-join.addEventListener('click' , () => {
-    const type = "join";
-    const id = room_id.value;
-
-    play(type , id)
-})
-create.addEventListener('click' , () => {
-    const type = "create";
-
-    play(type)
-})
-
-function buy(product){
-    const name = product.name;
-    var p_quantity = 0;
-    // Retrieve the data from Firebase
-    get(products)
-        .then((snapshot) => {
-            try {
-                const data = snapshot.val();
-                for (const key in data) {
-                    if (Object.hasOwnProperty.call(data, key)) {
-                        const child = data[key];
-                        if (key == name){
-                            p_quantity = child.quantity;
-                            console.log(p_quantity)
-                        }
-                    }
-                }
-                p_quantity = p_quantity + 1;
-                set(ref(db, 'cart/' + user_id + "/products/" + name), {
-                    price : product.price,
-                    quantity: p_quantity
-                });
+for (let i of buy_btns){
+    if ('product' in i.dataset){
+        i.onclick = (function(product){
+            return function(){
+                add_to_cart(product)
             }
-            catch(err){
-                
-            }
-        })
-        .catch((error) => {
-            console.error("Error retrieving Firebase data:", error);
-        });
-    // console.log(p_quantity);
-    // p_quantity = p_quantity + 1;
-    // console.log(p_quantity);
-    // set(ref(db, 'cart/' + user_id + "/products/" + name), {
-    //     price : product.price,
-    //     quantity: p_quantity
-    // });
-
+        })(i.dataset.product);
+    }
 }
 
-function play(type , id = 0){
-    localStorage.setItem("type" , type);
-    if (id != 0){
-        localStorage.setItem("id" , id);   
-    }
+
+function add_to_cart(product){
+    let db_ref = ref(database);
+    get(child(db_ref, `users/${localStorage.getItem('current_user')}/cart/${product}`))
+    .then((snapshot) => {
+        let price = products_dict[product].price;
+        if (snapshot.exists()) {
+            //snapshot.val() is the user data
+            console.log(snapshot.val());
+            var quantity = Number(snapshot.val().quantity) + 1
+            set(ref(database , `users/${localStorage.getItem('current_user')}/cart/${product}/quantity`) , quantity)        
+            .then(() => {
+                show_toast('success' , `Added ${product} to your cart`)
+            })
+            .catch(() => {
+                show_toast('success' , `Error adding ${product} to your cart`)
+            });
+        } else {
+            set(ref(database , `users/${localStorage.getItem('current_user')}/cart/${product}`) , {
+                quantity: 1,
+                price: price
+            })        
+            .then(() => {
+                show_toast('success' , `Added ${product} to your cart`)
+            })
+            .catch(() => {
+                show_toast('success' , `Error adding ${product} to your cart`)
+            });
+        }
+    })
+    .catch((error) => {
+        console.error(error);
+    });
 }

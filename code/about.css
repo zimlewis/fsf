@@ -155,44 +155,8 @@ hr
 
 
 
-.socialinfo
-{
-  font-size: 25px;
-}
 
 
-
-@media (max-width: 800px)
-{
-  .char, .box
-  {
-    flex: 100%;
-  }
-}
-
-.txttop
-{
-  padding-top: 20px;
-  font-size: 20px;
-}
-
-.socials
-{
-  padding-top: 20px;
-  columns: 4;
-}
-
-
-.txtbottom
-{
-  margin-top: 80px;
-  text-align: center;
-}
-
-.txtbottom p
-{
-  font-family: roblox;
-}
 
 .cardshowcaseheader
 {
@@ -210,48 +174,4 @@ hr
 {
   margin: 0;
   padding: 0;
-}
-
-
-#login-form
-{
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  border: 0; 
-  z-index: 7; 
-  width: 100%; 
-  min-height: 100%; 
-  transition: 0.5s;
-  display: none;
-}
-
-
-.foot
-{
-  text-align: center;
-  display: flex;
-}
-
-footer
-{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/bannerbg.png");
-  min-height: fit-content;
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-}
-
-.char
-{
-  width: 100%;
-  flex-direction: column;
-}
-
-.box
-{
-  background:linear-gradient(90deg, hsl(270 100% 50%), hsl(300 100% 50%), cyan);
-  border-radius: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <link rel="icon" href="media/logo.ico">
+        <link rel="stylesheet" href="code/boxicons-2.1.4/css/boxicons.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="code/main.css">
+        <link rel="stylesheet" href="code/cart.css">
+        <link rel="stylesheet" href="code/scifiscrollbar.css">
+        <script src = "code/loginrequired.js"></script>
+        <title>Cart</title>
+    </head>
+    <body>
+        <header>
+            <a href = "index.html" class = "logo">  
+                <img src = "media/logofsf.png" title = "file select fusion"> 
+            </a>
+            <input type = "checkbox" id = "menu-bar" />
+            
+
+            <nav class = "navbar">
+
+                <ul>
+                    <li><a href = "index.html">Home</a></li>
+                    <li><a href = "About.html">About us</a></li>
+                    <li><a href = "Feedback.html">Feedback</a></li>
+                    <li><a href = "youraccount.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href = "play.html" id = "play" href = "" class = "logo">  
+                Play
+            </a>
+            <a href = "cart.html" id = "play" href = "" class = "logo">  
+                <i class='bx bxs-cart'></i>
+            </a>
+            
+            <label for = "menu-bar"><i class='bx bx-menu'></i></label>
+        </header>
+
+        <div class = "wraper">
+            <h1>Your cart</h1>
+            <div class = "project">
+                <div class = "shop">
+                    <!-- <div class="box">
+                        <div class = "product-img">
+                            <img src="media/big-baby.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Collector's Edition</h3>
+                            <h4>Price: $420.69</h4>
+                            <p class="unit">Quantity:</p>
+                            <div class="unit-count">
+                                <i class="bx bx-minus-circle"></i>
+                                <span class="quantity">3</span>
+                                <i class="bx bx-plus-circle"></i>
+                            </div>
+                            <p class="btn-area">
+                                <i class="bx bx-trash"></i>
+                                <span class="btn2">remove</span>
+                            </p>
+                        </div>
+                    </div> -->
+                </div>
+
+                <div class = "right-bar">
+                    <p><span>Subtotal</span> <span  id = "subtotal"></span></p>
+                    <hr>
+                    <p><span>Taxes (5%)</span> <span id = "taxes"></span></p>
+                    <hr>
+                    <p><span>Total</span> <span id = "total"></span></p>
+
+                    <a href=""><i class='bx bxs-cart'></i> Checkout</a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Our games</h4>
+                        <ul>
+                            <li><a href="https://gamejolt.com/@dimlelquit">Gamejolt</a></li>
+                            <li><a href="https://gamejolt.com/@dimlelquit">Itch.io</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow us</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=100092621487529"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://discord.gg/CdpWPHPMQW"><i class="fab fa-discord"></i></a>
+                            <a href="https://twitter.com/fsf_bzstudios"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/channel/UCPahLuD23UxaG51kF8pYpcw"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact us</h4>
+                        <ul>
+                            <li><a onclick = "copyText(this.innerText)" href="tel:0355361405">09696942069</a></li>
+                            <li><a onclick = "copyText(this.innerText)" href="mailto:z1ml3w1s123@gmail.com">bz.indiestudio@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Copyright</h4>
+                        <ul>
+                            <li><a href="">Terms of Service</a></li>
+                            <li><a href="">EULA Agreement</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+       </footer>
+
+       <input type = "checkbox" name = "" id = "chat-toggle-check">
+       <label for = "chat-toggle-check"><img id = "chat-bubble-toggle" src = 'media/urichat.png'/></label>
+       <iframe id = "chat-bubble" src = "messaging.html"></iframe>
+
+       
+       <script src = "code/noftification.js"></script>
+       <script type = "module" src = "code/cart.js"></script>
+        
+    </body>
+</html>

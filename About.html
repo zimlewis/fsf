@@ -7,71 +7,38 @@
         <link rel="stylesheet" href="code/about.css">
         <link rel="stylesheet" href="code/scifiscrollbar.css">
         <link rel="stylesheet" href="code/main.css">
-        <link rel="stylesheet" href="code/cart.css">
         <link rel="stylesheet" href="code/boxicons-2.1.4/css/boxicons.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     </head>
     <script src = "code/chatbot.js"></script>
     <body>
-        <script src="code/menu.js"></script>
         <script src="code/slideshow.js"></script>
-        <script src = "code/toggleform.js"></script>
-        <iframe id = "login-form" src = "AccountForm.html"></iframe>
-        <div class="header">
-            <div id = "left-button">
-                <div class="h">
-                    <div class="dd">
-                        <button onclick="menu()" class="ddb">
-                            <img src="media/logo.png" style="width: 60px; height: auto;">
-                            <div class="bx bx-chevron-down" style="color: #ffffff;"></div>
-                        </button>
-                        <ul id="dropdown" class="ddc">
-                            <li>
-                                <a href="index.html" class="ddi">
-                                    <img src="media/logo.png" style="width: 60px; height: auto;" title="File Select Fusion">
-                                </a>
-                            </li>
-    
-                            <li>
-                                <a href="https://www.yugioh-card.com/en/" class="ddi">
-                                    <img src="media/ygo.png" style="width: 60px; height: auto;" title="Yugioh">
-                                </a>
-                            </li>
-    
-                            <li>
-                                <a href="https://magic.wizards.com/en" class="ddi">
-                                    <img src="media/mtg.png" style="width: 60px; height: auto;" title="Magic the Gathering">
-                                </a>
-                            </li>
-    
-                            <li>
-                                <a href="https://playruneterra.com/en-us/" class="ddi">
-                                    <img src="media/lor.png" style="width: 60px; height: auto;" title="Legends of Runeterra">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div id = "right-button">
-                <div class="h">
-                    <span onclick = "openAccountPage()" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Account">
-                        <p><div class = "bx bx-user-circle"></div></p>
-                    </span>
-                </div>
-                <div class="h">
-                    <a href = "play.html" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Play">
-                        <p><div class = "bx bx-play"></div></p>
-                    </a>
-                </div>
-                <div class="h">
-                    <span onclick = "toggleNav()" style="text-decoration:none; color:#ffffff; cursor: pointer;"  title="Open Cart">
-                        <p><div class = "bx bx-cart"></div></p>
-                    </span>
-                </div>
-            </div>
-        </div>
+        <header>
+            <a href = "index.html" class = "logo">  
+                <img src = "media/logofsf.png" title = "file select fusion"> 
+            </a>
+            <input type = "checkbox" id = "menu-bar" />
+            
 
-        <div style="line-height:86px;"><br></div>
+            <nav class = "navbar">
+
+                <ul>
+                    <li><a href = "index.html">Home</a></li>
+                    <li><a href = "About.html">About us</a></li>
+                    <li><a href = "Feedback.html">Feedback</a></li>
+                    <li><a href = "youraccount.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href = "play.html" id = "play" href = "" class = "logo">  
+                Play
+            </a>
+            <a href = "cart.html" id = "play" href = "" class = "logo">  
+                <i class='bx bxs-cart'></i>
+            </a>
+            
+            <label for = "menu-bar"><i class='bx bx-menu'></i></label>
+        </header>
+
         
         <div class="banner">
             <div class="playnow">
@@ -122,97 +89,56 @@
             <iframe scrolling="no" src = "https://zimlewis.github.io/cardshowcase/"></iframe>
         </div>
 
-        <img onclick = "toggle_chat()" id = "chat-bubble-toggle" src = 'media/urichat.png'/>
-        <iframe id = "chat-bubble" src = "messaging.html"></iframe>
-        
-        <footer>
-            <div class="foot">
-                <div class="char">
-                    <img src="media/jak.png" width="100%">
-                </div>
-        
-                <div class="box">
-        
-                    <div class="txttop">
-                        <h1>Contact Us</h1>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Our games</h4>
+                        <ul>
+                            <li><a href="https://gamejolt.com/@dimlelquit">Gamejolt</a></li>
+                            <li><a href="https://gamejolt.com/@dimlelquit">Itch.io</a></li>
+                        </ul>
                     </div>
-        
-                    <ul>
-                        <div class="socials">
-        
-                            <li>
-                                <a style="text-decoration:none; color:#000000;" href="https://www.youtube.com/channel/UCPahLuD23UxaG51kF8pYpcw" target="_blank">
-                                    <div class="bx bxl-youtube"></div>
-                                    <div class="socialinfo">Youtube</div>
-                                </a>
-                            </li>
-        
-                            <li>
-                                <a style="text-decoration:none; color:#000000;" href="https://discord.gg/CdpWPHPMQW" target="_blank">
-                                    <div class="bx bxl-discord"></div>
-                                    <div class="socialinfo">Discord</div>
-                                </a>
-                            </li>
-        
-                            <li>
-                                <a style="text-decoration:none; color:#000000;" href="https://twitter.com/fsf_bzstudios" target="_blank">
-                                    <div class="bx bxl-twitter"></div>
-                                    <div class="socialinfo">Twitter</div>
-                                </a>
-                            </li>
-        
-                            <li>
-                                <a style="text-decoration:none; color:#000000;" href="https://www.facebook.com/profile.php?id=100092621487529" target="_blank">
-                                    <div class="bx bxl-facebook-square"></div>
-                                    <div class="socialinfo">Facebook</div>
-                                </a>
-                            </li>
-        
+                    <div class="footer-col">
+                        <h4>Follow us</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=100092621487529"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://discord.gg/CdpWPHPMQW"><i class="fab fa-discord"></i></a>
+                            <a href="https://twitter.com/fsf_bzstudios"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/channel/UCPahLuD23UxaG51kF8pYpcw"><i class="fab fa-youtube"></i></a>
                         </div>
-                    </ul>
-        
-                    <div class="txtbottom">
-                        <p>@2023 BZ Studios</p>
                     </div>
-        
-                </div>
-        
-                <div class="char">
-                    <img src="media/mayo.png" width="100%">
+                    <div class="footer-col">
+                        <h4>Contact us</h4>
+                        <ul>
+                            <li><a onclick = "copyText(this.innerText)" href="tel:0355361405">09696942069</a></li>
+                            <li><a onclick = "copyText(this.innerText)" href="mailto:z1ml3w1s123@gmail.com">bz.indiestudio@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Copyright</h4>
+                        <ul>
+                            <li><a href="">Terms of Service</a></li>
+                            <li><a href="">EULA Agreement</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </footer> 
+       </footer>
 
-        <div id="mySidenav" class="sidenav">
-            <a class = "closebtn" onclick = "toggleNav()">&times;</a>
-            <div id = "products">
-            </div>
-            <div id = "checkout-btn">
-                <a href = "checkout.html">Check out</a>
-            </div>
-    
-        </div>
         <script>
-            function openNav() {
-                document.getElementById("mySidenav").style.left = "80%";
-                navOpen = true;
-            }
-            
-            function closeNav() {
-                document.getElementById("mySidenav").style.left = "100%";
-                navOpen = false
-            }
-            
-            var navOpen = false;
-            function toggleNav() {
-                if (navOpen) {
-                    closeNav();
-                } else {
-                    openNav();
-                }
-            }
+        function copyText(text) {
+            /* Copy text into clipboard */
+            navigator.clipboard.writeText
+                (text);
+        }
         </script>
-        <script type = "module" src = 'code/cart.js'></script>
+
+        <input type = "checkbox" name = "" id = "chat-toggle-check">
+        <label for = "chat-toggle-check"><img id = "chat-bubble-toggle" src = 'media/urichat.png'/></label>
+        <iframe id = "chat-bubble" src = "messaging.html"></iframe>
+
+        
 
         <script src = 'code/chat_toggle.js'></script>
 

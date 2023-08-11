@@ -1,132 +1,128 @@
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-body {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.349);
-}
-
-.container {
-    position: absolute;
-    width: 50vw;
-    height: 70vh;    
-    border-radius: 25px;
-    overflow: hidden;
-    border: 2px solid #00fff7;
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
     background-color: #0a1e31;
 }
 
-#cover{
-    transition: 0.5s;
-    width: 50%;
-    height: 100%;
-    left: 50%;
-    background-color: #0a1e31;
-    position: absolute;
+.container{
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-form {
-    overflow-y: scroll;
-    max-height: 100%;
-    min-height: 100%;
-    min-width: 50%;
-    max-width: 50%;
-    float: left;
-}
-
-
-
-
-
-
-
-
-/* adasdasdas sdfasfasfsdaaaaaaaaaaaaaaa8 */
-/* Add padding to containers */
-.form-content {
-    max-width: 100%;
-    overflow-x: hidden;
-    padding: 10px;
-    color: #ffffff;
     background-color: #0a1e31;
-}
-
-/* Full-width input fields */
-input[type=text],
-input[type=password] {
-    transition: 0.5s;
-    width: 90%;
-    padding: 15px;
-    margin: 5px 30px 22px 0;
-    display: inline-block;
-    background: #0a1e31;
-    color: #bcbcbc;
-    border: none;
-    border-bottom: 2px solid #ffffff;
-}
-
-input[type=text]:focus,
-input[type=password]:focus {
-    background-color: #0a1e31;
-    outline: none;
-    border-bottom: 2px solid #00fff7;
-}
-
-/* Overwrite default styles of hr */
-hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-}
-
-/* Set a style for the submit button */
-.registerbtn {
-    background-color: #c100c1;
-    color: #bcbcbc;
-    padding: 16px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
     width: 100%;
-    opacity: 0.9;
+    height: 100%;
 }
 
-.registerbtn:hover {
-    opacity: 1;
+.main{
+    width: 350px;
+    height: 500px;
+    background-color: red;
+    overflow: hidden;
+    background: url(../media/bannerbg.png) no-repeat center / cover;
+    border-radius: 10px;
+    border: 1px solid cyan;
 }
 
-/* Add a blue text color to links */
-a {
-    color: dodgerblue;
+#chk{
+    display: none;
 }
 
-/* Set a grey background color and center the text of the "sign in" section */
-.signin {
-    background-color: #f1f1f1;
-    text-align: center;
+.sign-up{
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
-
-#change-site{
-    background-color: #c100c1;
-    color: white;
-    padding: 16px 20px;
-    margin: auto;
-    border: none;
+.container label{
+    color: #fff;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
     cursor: pointer;
-    width: 80%;
-    opacity: 0.9;
+    transition: .5s ease-in-out
 }
 
-#change:hover {
-    opacity: 1;
+input{
+    width: 60%;
+    height: 10%;
+    background: #e0dede;
+    color: black;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.container button{
+    width: 60%;
+    height: 40px;
+    justify-content: center;
+    display: block;
+    background-color: #0073d8;
+    color: white;
+    margin: 10px auto;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+#login-facebook{
+    background-color: white;
+    color: #0073d8;
+}
+#login-facebook i{
+    color: #0073d8;
+    margin: auto;
+}
+
+#login-google{
+    background-color: white;
+    color: #e94235;
+}
+#login-google i{
+    color: #e94235;
+    margin: auto;
+}
+.container button:hover{
+    background: #0073d8;
+
+}
+
+.login{
+    height: 460px;
+    background: #0a1e31;
+    border-radius: 60% / 10%;
+    transform: translateY(-170px);
+    transition: .8s ease-in-out;
+}
+
+.login label{
+    color: #076cc2;
+    transform: scale(.6);
+}
+
+#chk:checked ~.login{
+    transform: translateY(-500px);
+}
+
+#chk:checked ~.login label{
+    transform: scale(1);
+    padding-top: 20px;
+}
+
+#chk:checked ~.sign-up label{
+    transform: scale(.6);
+}
+#small-label{
+    color: #ffffff;
+    font-size: 1rem;
 }

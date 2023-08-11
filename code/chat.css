@@ -15,6 +15,9 @@ body {
 /* Style the container */
 .container {
     position: relative;
+    display: flex;
+    height: 97vh;
+    flex-direction: column;
     max-width: 100%;
     background-color: #21222c;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -23,7 +26,7 @@ body {
 /* Style the messages container */
 #messages {
     padding: 10px;
-    height: 70vh;
+    height: 65vh;
     overflow-y: scroll;
 }
 
@@ -59,41 +62,26 @@ body {
 
 /* Style the form */
 #send-message {
-    width: 100%;
+    width: 99%;
     height: 12%;
-    padding: auto 5px;
-    position: fixed;
     bottom: 0;
     display: flex;
     background-color: #21222c;
 }
 
 /* Style the message input */
-#message {
-    flex: 1;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-}
 
 
 
 /* Style the submit button */
 #send-message button[type="submit"] {
+    flex: 10%;
+    background: 0;
     color: white;
-    background-color: #00000000;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-    overflow: auto;
-    border-radius: 30px;
-    outline: none;
-
-    font-size:24px;
-
-    box-shadow: none;
-
-    resize: none; /*remove the resize handle on the bottom right*/
+    height: 100%;
+    margin: auto;
+    border: 0;
+    outline: 0;
 }
 
 /* Style the submit button on hover */
@@ -109,8 +97,11 @@ body {
 
 
 #send-message input[id = 'message']{
-    margin: 15px 10px;
-    padding: 0px 15px;
+    margin: auto;
+    flex: 90%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 5px;
     outline: none;
     border: 0;
     background-color: #3a3b3c;
