@@ -1,146 +1,173 @@
 <!DOCTYPE html>
-<html lang="en-UK">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <head>
-        <title>File Select Fusion</title>
-        <link rel="icon" href="media/logo.ico">
-        <link rel="stylesheet" href="code/about.css">
-        <link rel="stylesheet" href="code/scifiscrollbar.css">
-        <link rel="stylesheet" href="code/main.css">
-        <link rel="stylesheet" href="code/boxicons-2.1.4/css/boxicons.css">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    </head>
-    <script src = "code/chatbot.js"></script>
-    <body>
-        <script src="code/slideshow.js"></script>
-        <header>
-            <a href = "index.html" class = "logo">  
-                <img src = "media/logofsf.png" title = "file select fusion"> 
-            </a>
-            <input type = "checkbox" id = "menu-bar" />
-            
-
-            <nav class = "navbar">
-
-                <ul>
-                    <li><a href = "index.html">Home</a></li>
-                    <li><a href = "About.html">About us</a></li>
-                    <li><a href = "Feedback.html">Feedback</a></li>
-                    <li><a href = "youraccount.html">Account</a></li>
-                </ul>
-            </nav>
-            <a href = "play.html" id = "play" href = "" class = "logo">  
-                Play
-            </a>
-            <a href = "cart.html" id = "play" href = "" class = "logo">  
-                <i class='bx bxs-cart'></i>
-            </a>
-            
-            <label for = "menu-bar"><i class='bx bx-menu'></i></label>
-        </header>
-
-        
-        <div class="banner">
-            <div class="playnow">
-            </div>
-        </div>
-
-        <div class="trailer">
-            <div class="vid">
-                <iframe width="100%" height="100%" style="border: 5px solid #00fff7;" src="https://www.youtube.com/embed/XaXxs0ZvDlc?mute=1"></iframe>
-            </div>
-
-            <div class="vidtxt">
-                <h1>Experience the Chaos</h1>
-                <p>File Select Fusion combines the strategic nature of your regular TCG with party card games.</p>
-                <p>Test your Might with your gamer skills! Test your Luck with stupid RNG elements!</p>
-            </div>
-        </div>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="icon" href="media/logo.ico">
+    <link rel="stylesheet" href="code/boxicons-2.1.4/css/boxicons.css">
+    <link rel="stylesheet" href="code/boxicons-2.1.4/css/animations.css">
+    <link rel="stylesheet" href="code/header_footer.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="code/aboutpage.css">
+</head>
+<body>
+    <header>
+        <a href = "index.html" class = "logo">  
+            <img src = "media/logofsf.png" title = "file select fusion"> 
+        </a>
+        <input type = "checkbox" id = "menu-bar" />
         
 
+        <nav class = "navbar">
+
+            <ul>
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "About.html">About us</a></li>
+                <li><a href = "Feedback.html">Feedback</a></li>
+                <li><a href = "youraccount.html">Account</a></li>
+            </ul>
+        </nav>
+        <a href = "play.html" id = "play" href = "" class = "logo">  
+            Play
+        </a>
+        <a href = "cart.html" id = "play" href = "" class = "logo">  
+            <i class='bx bxs-cart'></i>
+        </a>
+        
+        <label for = "menu-bar"><i class='bx bx-menu'></i></label>
+    </header>
+    <div class="bigbanner">
+        <div class="banner"><img src="media/aboutbanner.jpg" alt="banner"></div>
+        <div class="playbutton"><i class="bx bx-tada-hover"><img src="media/playnow.png" alt="playbutton"></i></div>
+    </div>
+
+    <div class="midsection">
+        <div class="trailerinfo">
+            <h1>Experience the Chaos</h1>
+            <p>File Select Fusion combines the strategic nature of your regular TCG with party card games.</p><br>
+            <p>Test your Might with your gamer skills! Test your Luck with stupid RNG elements!</p>
+        </div>
+
+        <div class="trailerbox">
+            <div class="trailer">
+                <iframe src="https://www.youtube.com/embed/XaXxs0ZvDlc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="midsection">
         <div class="slideshow">
-            <div class="slidetxt">
+            <div class="slideshowbutton" onclick="prevSlide()">
+                <div class="bx bx-left-arrow"></div>
+            </div>
+
+            <div class="slideshowimages">
+                <img id="slideshowimages" alt="error">
+            </div>
+
+            <div class="slideshowbutton" onclick="nextSlide()">
+                <div class="bx bx-right-arrow"></div>
+            </div>
+
+            <div class="slideshowinfo">
                 <h1>Battle through Worlds</h1>
                 <p>Each country brings a different stage for your army to overcome.</p>
-                <p>With each stage comes a different gimmick, completely unique to that stage</p>
+                <p>With each stage comes a different gimmick, completely unique to that stage.</p>
             </div>
-
-            <div class="slider">
-                <div class="slides" style="border: 5px solid #00fff7;">
-                    <div class="slide">
-                        <img src="media/slide4.png">
-                        <img src="media/slide3.png">
-                        <img src="media/slide2.png">
-                        <img src="media/slide1.png">
-                        <img src="media/slide4.png">
-                    </div>
-                </div>
-            </div>
+            
         </div>
+    </div>
 
-        <div class="cardshowcaseheader">
-            <h1>Adapt new Playstyles</h1>
-            <p>With each country comes a new culture. With each culture brings a new playstyle</p>
-            <p>Mix and match your army to create perfect sygnergies</p>
-        </div>
-
+    <div class="midsection">
         <div class="cardshowcase">
-            <iframe scrolling="no" src = "https://zimlewis.github.io/cardshowcase/"></iframe>
-        </div>
+            <div class="cardshowcase_header">
+                <h1>Adapt new Playstyles</h1>
+                <p>Each card brings a new utility to your deck.</p>
+                <p>Mix and match your cards to create the perfect sygnergy!</p>
+            </div>
 
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="row">
-                    <div class="footer-col">
-                        <h4>Our games</h4>
-                        <ul>
-                            <li><a href="https://gamejolt.com/@dimlelquit">Gamejolt</a></li>
-                            <li><a href="https://gamejolt.com/@dimlelquit">Itch.io</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Follow us</h4>
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/profile.php?id=100092621487529"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://discord.gg/CdpWPHPMQW"><i class="fab fa-discord"></i></a>
-                            <a href="https://twitter.com/fsf_bzstudios"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.youtube.com/channel/UCPahLuD23UxaG51kF8pYpcw"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Contact us</h4>
-                        <ul>
-                            <li><a onclick = "copyText(this.innerText)" href="tel:0355361405">09696942069</a></li>
-                            <li><a onclick = "copyText(this.innerText)" href="mailto:z1ml3w1s123@gmail.com">bz.indiestudio@gmail.com</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Copyright</h4>
-                        <ul>
-                            <li><a href="">Terms of Service</a></li>
-                            <li><a href="">EULA Agreement</a></li>
-                        </ul>
-                    </div>
+            <div class="cardshowcase_navbar">
+                <div class="cardshowcase_navbutton" onclick="changeCardShowcase(1)">
+                    <b>Units</b>
+                </div>
+
+                <div class="cardshowcase_navbutton" onclick="changeCardShowcase(2)">
+                    <b>Tricks</b>
+                </div>
+
+                <div class="cardshowcase_navbutton" onclick="changeCardShowcase(3)">
+                    <b>Fusions</b>
+                </div>
+
+                <div class="cardshowcase_navbutton" onclick="changeCardShowcase(4)">
+                    <b>Items</b>
+                </div>
+
+                <div class="cardshowcase_navbutton" onclick="changeCardShowcase(5)">
+                    <b>Directories</b>
                 </div>
             </div>
-       </footer>
 
-        <script>
-        function copyText(text) {
-            /* Copy text into clipboard */
-            navigator.clipboard.writeText
-                (text);
-        }
-        </script>
+            <div class="cardshowcase_showcase">
+                <div class="cardshowcase_card">
+                    <img id="card_st" alt="card">
+                </div>
 
-        <input type = "checkbox" name = "" id = "chat-toggle-check">
-        <label for = "chat-toggle-check"><img id = "chat-bubble-toggle" src = 'media/urichat.png'/></label>
-        <iframe id = "chat-bubble" src = "messaging.html"></iframe>
+                <div class="cardshowcase_card">
+                    <img id="card_nd" alt="card">
+                </div>
 
+                <div class="cardshowcase_card">
+                    <img id="card_rd" alt="card">
+                </div>
+
+                <div class="cardshowcase_card">
+                    <img id="card_th" alt="card">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="midsection">
         
-
-        <script src = 'code/chat_toggle.js'></script>
-
-    </body>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Our games</h4>
+                    <ul>
+                        <li><a href="https://gamejolt.com/@dimlelquit">Gamejolt</a></li>
+                        <li><a href="https://gamejolt.com/@dimlelquit">Itch.io</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100092621487529"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://discord.gg/CdpWPHPMQW"><i class="fab fa-discord"></i></a>
+                        <a href="https://twitter.com/fsf_bzstudios"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/channel/UCPahLuD23UxaG51kF8pYpcw"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact us</h4>
+                    <ul>
+                        <li><a onclick = "copyText(this.innerText)" href="tel:0355361405">09696942069</a></li>
+                        <li><a onclick = "copyText(this.innerText)" href="mailto:z1ml3w1s123@gmail.com">bz.indiestudio@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Copyright</h4>
+                    <ul>
+                        <li><a href="">Terms of Service</a></li>
+                        <li><a href="">EULA Agreement</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+   </footer>
+<script src="code/aboutpage.js"></script>
+</body>
 </html>
